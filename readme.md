@@ -21,7 +21,7 @@ const QuoteListSchema = z.array(
 ```
 
 Sample output (given sample prompt and pdf):
-```json
+```typescript
 [
   {
     text: 'A user is iteratively teaching a neuro-symbolic model to distinguish between different concepts (labels).'

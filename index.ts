@@ -11,6 +11,8 @@ const openai = new OpenAI({
 async function main() {
   const pages = await pdf("fixtures/Gebgreegziabher 2025 - SupportingCoadaptiveMachineTeaching.pdf");
   
+  const texts: string[] = [];
+
   for await (const page of pages) {
     const base64Image = page.toString('base64');
     const completion = await openai.chat.completions.create({
@@ -30,11 +32,11 @@ async function main() {
       model: "allenai/olmOCR-2-7B-1025",
       max_tokens: 4092,
     });
-    console.log(completion.choices[0]?.message.content);
-    // console.log(completion.usage?.prompt_tokens, completion.usage?.completion_tokens);
-    break;
+    const text = completion.choices[0]?.message.content ?? "" ;
+    texts.push(text);
   }
-
+  const fullText = texts.join("\n");
+  console.log(fullText);
 }
 
 main();

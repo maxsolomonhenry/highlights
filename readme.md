@@ -3,44 +3,45 @@
 Support and sketch code for dynamic highlighting project.
 
 ## Overview
-A simple project that retrieves structured data in response to a query about a pdf. 
-The repo contains a sample pdf, as well as an example query. 
+A simple project that retrieves structured data in response to a query about a pdf. It accepts a pdf url, [this one](https://pdfobject.com/pdf/sample.pdf) by default, and returns an array of quotes in json matching the query.
 
 To use, run:
 
 `npx tsx index.ts`
 
-This script applies the following query: _"Please find all sentences that include the word user."_
-Note that the script breaks after the first page to save on token usage.
+This script applies the following query: _"Please find a sentence that include the word Morbi or mauris."_
 
-We define an output schema using `Zod`, e.g. a list of objects:
+Use the Reducto API to specify a scheme. It's a bit tricky to get an array, here's what we've landed on for now:
 ```typescript
-const QuoteListSchema = z.array(
-  z.object({ text: z.string().describe("The retrieved text.") })
-);
+const schema = {
+  type: 'object',
+  properties: {
+    quotes: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          text: {
+            type: 'string',
+            description: 'Verbatim quote from the document matching user query.'
+          },
+        },
+      },
+    },
+  },
+};
 ```
 
-Sample output (given sample prompt and pdf):
+Sample output (given sample prompt and pdf address):
 ```typescript
 [
+  { text: 'In mauris.' },
+  { text: 'Fusce vulputate ipsum a mauris.' },
   {
-    text: 'A user is iteratively teaching a neuro-symbolic model to distinguish between different concepts (labels).'
+    text: 'Morbi elit nunc, facilisis a, mollis a, molestie at, lectus.'
   },
-  {
-    text: "This allows the neuro-symbolic model to learn pattern rules about the label and suggest annotations to unseen data points (2). As the user reads and accepts or rejects model-suggested labels, MoCHA uses an LLM to generate counterfactuals that structurally resemble the original data point and match the user's pattern rules for the differently predicted labels (3)."
-  },
-  {
-    text: 'When the user provides feedback, the process returns to step 1.'
-  },
-  {
-    text: 'The user then assigns labels to the generated counterfactual examples by accepting or rejecting the LLM-generated labels to be used in consecutive model training (5).'
-  },
-  {
-    text: "As the user provides feedback through labeled data, the model iteratively learns and adjusts its decision boundary, to better align with the user's mental model and labeling (6)."
-  },
-  {
-    text: 'Users teach models their concept definition through data labeling, while refining their own understandings throughout the process.'
-  }
+  { text: 'Suspendisse eget mauris eu tellus molestie cursus.' },
+  { text: 'Ut sit amet diam suscipit mauris ornare aliquam.' }
 ]
 ```
 
@@ -52,7 +53,8 @@ Sample output (given sample prompt and pdf):
 - [ ] finesse schema
 
 ## Learnings
-
-- Use Zod for structured calls and returns. Can enforce a schema (json) and seems to work well with Claude.
+- Reducto can do just about everything, and this dramatically simplifies the pipeline.
+- If it can't satisfy your request, Reducto might search the text in its own system prompt to make you happy and return an answer. Beware!
+- (If using Claude) use Zod for structured calls and returns. Can enforce a schema (json) and seems to work well with Claude.
 - You have to convert a Pdf to image before sending to deep-infra. Using `pdf-to-img`.
 - Deep Infra benefits from explicit instructions to _not_ summarize the text, instead to return text verbatim.

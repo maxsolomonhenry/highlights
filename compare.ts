@@ -15,8 +15,6 @@
 import 'dotenv/config';
 import Anthropic from '@anthropic-ai/sdk';
 import Reducto from 'reductoai';
-import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
-import { z } from 'zod';
 
 // ── Configuration ────────────────────────────────────────────────────────────
 
@@ -28,13 +26,34 @@ const PDF_URL =
 const USER_QUERY =
   'What are the main contributions of this paper, and what user study or evaluation was conducted to validate them?';
 
-// Structured output schema — same for both approaches
-const QuoteListSchema = z.array(
-  z.object({
-    text: z.string().describe('Verbatim or closely paraphrased passage from the paper answering the query.'),
-    section: z.string().optional().describe('Section of the paper where this passage appears, if identifiable.'),
-  })
-);
+// Tool input schema for structured extraction via Claude tool use
+const EXTRACT_TOOL: Anthropic.Tool = {
+  name: 'extract_passages',
+  description: 'Return passages from the document that answer the user query.',
+  input_schema: {
+    type: 'object',
+    properties: {
+      passages: {
+        type: 'array',
+        items: {
+          type: 'object',
+          properties: {
+            text: {
+              type: 'string',
+              description: 'Verbatim or closely paraphrased passage from the paper.',
+            },
+            section: {
+              type: 'string',
+              description: 'Section of the paper where this passage appears, if identifiable.',
+            },
+          },
+          required: ['text'],
+        },
+      },
+    },
+    required: ['passages'],
+  },
+};
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -103,23 +122,23 @@ async function runClaude(): Promise<{ latency: string; result: unknown }> {
 
   // Pass the PDF URL directly — Claude's API fetches it server-side.
   // No local download or OCR step needed.
+  // Structured output via tool use (no prefill required).
   const start = Date.now();
-  const message = await client.messages.parse({
+  const message = await client.messages.create({
     model: 'claude-sonnet-4-6',
     max_tokens: 2000,
     system:
       'You extract relevant passages from academic papers that answer a user query. ' +
-      'Return verbatim or closely paraphrased text along with the section it came from.',
+      'Always call the extract_passages tool with your answer.',
+    tools: [EXTRACT_TOOL],
+    tool_choice: { type: 'tool', name: 'extract_passages' },
     messages: [
       {
         role: 'user',
         content: [
           {
             type: 'document',
-            source: {
-              type: 'url',
-              url: PDF_URL,
-            },
+            source: { type: 'url', url: PDF_URL },
           } as any,
           {
             type: 'text',
@@ -128,13 +147,15 @@ async function runClaude(): Promise<{ latency: string; result: unknown }> {
         ],
       },
     ],
-    output_config: {
-      format: zodOutputFormat(QuoteListSchema),
-    },
   });
   const latency = elapsed(start);
 
-  return { latency, result: message.parsed_output };
+  const toolUse = message.content.find((b) => b.type === 'tool_use') as
+    | Anthropic.ToolUseBlock
+    | undefined;
+  const result = (toolUse?.input as any)?.passages ?? toolUse?.input;
+
+  return { latency, result };
 }
 
 // ── Main ─────────────────────────────────────────────────────────────────────

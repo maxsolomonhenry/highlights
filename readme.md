@@ -47,6 +47,26 @@ const USER_QUERY =
 
 Claude is 1.7x faster, returns more passages, and produces cleaner section labels. Reducto mislabels Introduction content as "ABSTRACT." Both produce accurate extracted text — no hallucinated or fabricated passages in either case.
 
+## Multi-Paper Benchmark
+
+Ran both approaches across 5 papers from [Glassman Lab](https://glassmanlab.seas.harvard.edu/) x 5 queries each.
+
+**Papers:** PaTAT, ChainForge, DynaVis, AbstractExplorer, CorpusStudio
+
+**Queries:**
+1. What are the main contributions, and what user study or evaluation was conducted?
+2. What system or tool does this paper present, and how does it work?
+3. What are the key findings or results?
+4. What limitations or future work do the authors discuss?
+5. What related work or prior approaches do the authors compare against?
+
+To reproduce: `npx tsx benchmark.ts`, then `python plot_benchmark.py`.
+
+![Summary](results/benchmark_summary.png)
+![By paper](results/benchmark_by_pdf.png)
+
+Claude is consistently faster and returns more passages across all papers and queries. Raw quotes are in `results/benchmark_quotes.json`.
+
 ### Example Output
 
 ```json

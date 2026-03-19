@@ -1,0 +1,1836 @@
+[
+  {
+    "approach": "Reducto",
+    "pdf": "PaTAT",
+    "query": "What are the main contributions of this paper, and what user study or evaluation was conducted to validate them?",
+    "latency_s": 69.864,
+    "num_passages": 5,
+    "passages": [
+      {
+        "text": "This paper makes the following contributions: (1) A new interactive program synthesis approach that learns symbolic representation of codes and themes through patterns that capture the lexical, syntactic, and semantic features from the user’s qualitative coding process in real-time. (2) PaTAT, a practical system that implements this approach with a mixed-initiative interface for effective human-AI collaboration in thematic analysis that facilitates not only the performance of the annotation but also the learning of its users. (3) A lab user study with 8 experienced qualitative researchers that demonstrate the usefulness, usability, and effectiveness of PaTAT.",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "We illustrate the usability of PaTAT through a lab user study with eight qualitative researchers. Participants found PaTAT usable and useful for their qualitative analysis workflow. The findings of this study also suggest design implications for future AI-enabled qualitative analysis-assisting tools, e.g., regarding adapting different models and interaction strategies based on task goals and contexts while working with ambiguities and uncertainties.",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "A user study with 8 qualitative researchers illustrated PaTAT's usefulness in providing qualitative coding assistance and effectiveness in facilitating the human learning of data.",
+        "section": "CONCLUSION"
+      },
+      {
+        "text": "We conducted a lab user study with 8 participants with qualitative coding experience to evaluate PaTAT. The study examined the following research questions: RQ1: How effective is PaTAT in providing explainable code recommendations for the user's annotation tasks in qualitative coding? RQ2: How useful is PaTAT for facilitating the learning of users, i.e., the discovery of new themes, trends, and connections among data items? RQ3: How well can PATAT address the ambiguous, dynamic, and iterative nature of qualitative coding?",
+        "section": "5 USER STUDY"
+      },
+      {
+        "text": "All participants interacted with a version of the system for 30 minutes in each condition. When interacting with the PaTAT condition, participants added 83 annotations with 8.5 codes on average. PaTAT achieves good prediction accuracy in code recommendations after learning from user annotations. The results also suggest that while the different interaction mechanisms used in PaTAT can introduce complexity, they make significant contributions to knowledge discovery, facilitating user learning, and overall user-perceived usefulness in the qualitative coding process.",
+        "section": "5.3 Study results"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "PaTAT",
+    "query": "What are the main contributions of this paper, and what user study or evaluation was conducted to validate them?",
+    "latency_s": 31.352,
+    "num_passages": 6,
+    "passages": [
+      {
+        "text": "This paper makes the following contributions:\n(1) A new interactive program synthesis approach that learns symbolic representation of codes and themes through patterns that capture the lexical, syntactic, and semantic features from the user's qualitative coding process in real-time.\n(2) PaTAT, a practical system that implements this approach with a mixed-initiative interface for effective human-AI collaboration in thematic analysis that facilitates not only the performance of the annotation but also the learning of its users.\n(3) A lab user study with 8 experienced qualitative researchers that demonstrate the usefulness, usability, and effectiveness of PaTAT.",
+        "section": "Introduction"
+      },
+      {
+        "text": "We illustrate the usability of PaTAT through a lab user study with eight qualitative researchers. Participants found PaTAT usable and useful for their qualitative analysis workflow. The findings of this study also suggest design implications for future AI-enabled qualitative analysis-assisting tools, e.g., regarding adapting different models and interaction strategies based on task goals and contexts while working with ambiguities and uncertainties.",
+        "section": "Introduction"
+      },
+      {
+        "text": "We conducted a lab user study with 8 participants with qualitative coding experience to evaluate PaTAT. The study examined the following research questions:\n• RQ1: How effective is PaTAT in providing explainable code recommendations for the user's annotation tasks in qualitative coding?\n• RQ2: How useful is PaTAT for facilitating the learning of users, i.e., the discovery of new themes, trends, and connections among data items?\n• RQ3: How well can PaTAT address the ambiguous, dynamic, and iterative nature of qualitative coding?",
+        "section": "User Study"
+      },
+      {
+        "text": "We used a within-subjects study design where each participant used the system under three different conditions:\n• MANUAL: a baseline version of PaTAT without any intelligent features such as code recommendation, ranking, and grouping.\n• BERT: a version of PaTAT using a \"black-box\" BERT model to make code recommendations... However, no explanations (e.g., within-item text highlights, the display of learned patterns) were available due to the black-box nature of the model.\n• PaTAT: a full version of PaTAT using our pattern-based synthesizer, with all key features including label recommendations, explanations, ranking, and grouping.",
+        "section": "User Study"
+      },
+      {
+        "text": "All participants interacted with a version of the system for 30 minutes in each condition. When interacting with the PaTAT condition, participants added 83 annotations with 8.5 codes on average. PaTAT achieves good prediction accuracy in code recommendations after learning from user annotations. The results also suggest that while the different interaction mechanisms used in PaTAT can introduce complexity, they make significant contributions to knowledge discovery, facilitating user learning, and overall user-perceived usefulness in the qualitative coding process.",
+        "section": "Study Results"
+      },
+      {
+        "text": "the results of the post-study questionnaires show that MANUAL condition scored higher in the ease of use and perceived user control while the PaTAT condition scored higher in usefulness and facilitating human learning of data. Specifically, PaTAT was considered to be the most useful condition for annotation and the most effective condition for facilitating the user's learning of data characteristics by the majority of participants across all three conditions. Participants considered PaTAT more difficult to use and less controllable relative to fully manual annotation, but, compared to the other AI-assisted approach—the \"black box\" BERT condition—PaTAT's interpretable pattern-based approach shows a clear advantage in usefulness, user-perceived sense of control, and facilitation of human learning.",
+        "section": "Study Results"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "PaTAT",
+    "query": "What system or tool does this paper present, and how does it work?",
+    "latency_s": 56.272,
+    "num_passages": 6,
+    "passages": [
+      {
+        "text": "PaTAT introduces an interactive program synthesis approach that learns symbolic sets of pattern rules over neurally-generated lexical, syntactic, and semantic features of the data through a collaborative annotation process with users. These features include parts-of-speech tags, word lemmas, soft matches, entity types, and wildcards. By creating a linear combination of a small set of these pattern rules, PaTAT exploits the power and flexibility of neural methods while maintaining explicit, concise, top-level rule-based reasoning.",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "PaTAT, a new AI-enabled tool that uses an interactive program synthesis approach to learn flexible and expressive patterns over user-annotated codes in real-time as users annotate data. To accommodate the ambiguous, uncertain, and iterative nature of thematic analysis, the use of user-interpretable patterns allows users to understand and validate what the system has learned, make direct fixes, and easily revise, split, or merge previously annotated codes.",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "The architecture and the human-AI collaborative workflow of PATAT are illustrated in Figure 2. As shown, the user interacts with an interactive rule synthesizer through PaTAT's interface by iteratively annotating, grouping, and/or ranking data; reviewing explanations of model recommendations and synthesized rules; and repairing model outcomes when needed.",
+        "section": "4 PATAT SYSTEM"
+      },
+      {
+        "text": "PaTAT learns explainable pattern rules that capture lexical, syntactic, and semantic patterns across data items (e.g., sentences, short paragraphs) that were annotated with the same code by users. The pattern-learning process occurs simultaneously in the background as the user codes more data. PaTAT updates the learned patterns either when the user makes every 10 new annotations or when the user explicitly clicks the \"Retrain\" button on the toolbar.",
+        "section": "4.2 Key Features"
+      },
+      {
+        "text": "PaTAT provides several features that allow flexible human-AI collaborative coding in which both parties can improve their understanding of data through mixed-initiative interaction, while users still have full control of the entire coding process.",
+        "section": "4 PATAT SYSTEM"
+      },
+      {
+        "text": "PaTAT uses a linear layer model to combine up to 5 individual patterns, picked through a pattern selection process, in order to make code recommendations for unlabeled data. The upper limit of 5 patterns was chosen through experimentation, balancing (1) the interpretability of the model's outcome, as it is infeasible for users to make sense of a large number of patterns, and (2) the expressive power of the model to capture codes with more complex meanings.",
+        "section": "4.3 Algorithms"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "PaTAT",
+    "query": "What system or tool does this paper present, and how does it work?",
+    "latency_s": 0,
+    "num_passages": 0,
+    "passages": [],
+    "error": "429 {\"type\":\"error\",\"error\":{\"type\":\"rate_limit_error\",\"message\":\"This request would exceed your organization's rate limit of 30,000 input tokens per minute (org: 1061dc4d-56c6-46c4-815b-9479cc90fe84, model: claude-sonnet-4-6). For details, refer to: https://docs.claude.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://claude.com/contact-sales to discuss your options for a rate limit increase.\"},\"request_id\":\"req_011CZCYQQWxPn7pkjdeew4TT\"}"
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "PaTAT",
+    "query": "What are the key findings or results reported in this paper?",
+    "latency_s": 63.097,
+    "num_passages": 5,
+    "passages": [
+      {
+        "text": "PaTAT introduces an interactive program synthesis approach that learns symbolic sets of pattern rules over neurally-generated lexical, syntactic, and semantic features of the data through a collaborative annotation process with users. These features include parts-of-speech tags, word lemmas, soft matches, entity types, and wildcards. By creating a linear combination of a small set of these pattern rules, PaTAT exploits the power and flexibility of neural methods while maintaining explicit, concise, top-level rule-based reasoning.",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "We illustrate the usability of PaTAT through a lab user study with eight qualitative researchers. Participants found PaTAT usable and useful for their qualitative analysis workflow. The findings of this study also suggest design implications for future AI-enabled qualitative analysis-assisting tools, e.g., regarding adapting different models and interaction strategies based on task goals and contexts while working with ambiguities and uncertainties.",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "PaTAT achieves good prediction accuracy in code recommendations after learning from user annotations. The results also suggest that while the different interaction mechanisms used in PaTAT can introduce complexity, they make significant contributions to knowledge discovery, facilitating user learning, and overall user-perceived usefulness in the qualitative coding process.",
+        "section": "5 USER STUDY"
+      },
+      {
+        "text": "The results of our study show that, by taking advantage of the strengths of the human-AI team, researchers can act on model-generated feedback and perform ongoing refinement and evolution of the coding framework with the assistance of the system. This can help streamline and enhance the coding process, allowing researchers to effectively analyze and interpret their data.",
+        "section": "6 DISCUSSION"
+      },
+      {
+        "text": "PaTAT uses a new explainable interactive pattern synthesis approach that (1) learns about the codes as users annotate more data, (2) provides code recommendations, (3) explains what the model has learned, (4) accommodates the development and evolution of codebooks, and (5) facilitates users' learning of data characteristics, trends, patterns in order for them to form new theories and insights.",
+        "section": "8 CONCLUSION"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "PaTAT",
+    "query": "What are the key findings or results reported in this paper?",
+    "latency_s": 28.542,
+    "num_passages": 8,
+    "passages": [
+      {
+        "text": "PaTAT achieves good prediction accuracy in code recommendations after learning from user annotations. The results also suggest that while the different interaction mechanisms used in PaTAT can introduce complexity, they make significant contributions to knowledge discovery, facilitating user learning, and overall user-perceived usefulness in the qualitative coding process.",
+        "section": "5.3 Study results"
+      },
+      {
+        "text": "the results of the post-study questionnaires show that MANUAL condition scored higher in the ease of use and perceived user control while the PaTAT condition scored higher in usefulness and facilitating human learning of data. Specifically, PaTAT was considered to be the most useful condition for annotation and the most effective condition for facilitating the user's learning of data characteristics by the majority of participants across all three conditions. Participants considered PaTAT more difficult to use and less controllable relative to fully manual annotation, but, compared to the other AI-assisted approach—the 'black box' BERT condition—PaTAT's interpretable pattern-based approach shows a clear advantage in usefulness, user-perceived sense of control, and facilitation of human learning.",
+        "section": "5.3.1 Quantitative Results"
+      },
+      {
+        "text": "The performance of PaTAT's model is comparable to that of BERT when trained on a smaller number of examples (fewer than 50–100). This represents the most common target use case of PaTAT, as the number of items labeled with each code tends to be small in most qualitative analysis tasks.",
+        "section": "4.3.3 Offline performance evaluation"
+      },
+      {
+        "text": "KF1: The role of AI assistance can be active or passive in collaboration with users, depending on user contexts and preferences. Participants naturally adopted different annotation practices on their own as they interacted with PaTAT.",
+        "section": "5.3.2 Post-Study Interviews"
+      },
+      {
+        "text": "KF2: Understanding the current state of the model contributes to error discovery and repair. Participants found the user-interpretable patterns synthesized by PaTAT to be valuable. Some participants used them as a way to validate the capability of the system.",
+        "section": "5.3.2 Post-Study Interviews"
+      },
+      {
+        "text": "KF3: The abstractness of the code and the data associated with it affects PaTAT's ability to assist the user. Due to their abstract nature, certain themes that participants attempted to capture in a code, e.g., 'atmosphere' or 'discrimination', were more challenging for PaTAT's model to accurately capture from a few examples.",
+        "section": "5.3.2 Post-Study Interviews"
+      },
+      {
+        "text": "KF4: Interpretable patterns facilitate the discovery of new themes, trends, and connections among data items. Patterns that captured outliers in a dataset helped participants notice important details and nuanced aspects of the data.",
+        "section": "5.3.2 Post-Study Interviews"
+      },
+      {
+        "text": "KF5: Different rankings and groupings of data accommodate the ambiguous, dynamic, and iterative nature of qualitative coding. Participants frequently experimented with different grouping strategies during sessions. These interactions helped participants review and revise their codes.",
+        "section": "5.3.2 Post-Study Interviews"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "PaTAT",
+    "query": "What limitations or future work do the authors discuss?",
+    "latency_s": 41.982,
+    "num_passages": 5,
+    "passages": [
+      {
+        "text": "The current version of PaTAT presents several technical limitations. The syntax of our pattern language is already more expressive and flexible than previous rule-based qualitative coding assistance systems such as Cody [52] with support for entity types (e.g., $DATE, $ORG, and $EVENT) and synonyms, but PaTAT's syntax does not yet represent more expressive natural language features, such as sentiment, co-references, and commonsense knowledge.",
+        "section": "7 LIMITATIONS AND FUTURE WORK"
+      },
+      {
+        "text": "The current PaTAT interface supports the use of only one user at a time, while qualitative coding is often a collaborative effort with multiple users involved.",
+        "section": "7 LIMITATIONS AND FUTURE WORK"
+      },
+      {
+        "text": "PaTAT offers many interface features and strategies to support ranking, grouping, interpreting, exploring, and validating data items and the model’s recommendations. Although all of them are useful in some contexts, the findings of our user study suggest that most of them are most useful in different contexts. The large number of features also contributes to the complexity of the interface, affecting the ease of use of the system.",
+        "section": "7 LIMITATIONS AND FUTURE WORK"
+      },
+      {
+        "text": "Following our lab study, we plan to conduct a larger-scale deployment study and eventually a public release of PaTAT. We believe that this will not only allow a broad group of qualitative researchers to take advantage of PaTAT's AI assistance in their own task domains, but also enable us to study the long-term in-situ usage of PaTAT in its intended context of use.",
+        "section": "7 LIMITATIONS AND FUTURE WORK"
+      },
+      {
+        "text": "Finally, a limitation of our lab study is its lack of quantitative results on how the use of PaTAT impacts the efficiency of the qualitative coding process, despite the fact that the qualitative findings suggest that users perceive the use of PaTAT as having positive effects on their coding efficiency.",
+        "section": "7 LIMITATIONS AND FUTURE WORK"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "PaTAT",
+    "query": "What limitations or future work do the authors discuss?",
+    "latency_s": 28.096,
+    "num_passages": 6,
+    "passages": [
+      {
+        "text": "The current version of PaTAT presents several technical limitations. The syntax of our pattern language is already more expressive and flexible than previous rule-based qualitative coding assistance systems such as Cody [52] with support for entity types (e.g., $DATE, $ORG, and $EVENT) and synonyms, but PaTAT's syntax does not yet represent more expressive natural language features, such as sentiment, co-references, and commonsense knowledge. To accommodate the larger search space that would come with the expansion of the pattern language, more effective synthesis and pruning algorithms are needed, in order to cover the search space more efficiently and/or shrink the search space during pattern synthesis. This would reduce the computation time for each retraining round while the user continues to annotate data.",
+        "section": "7 LIMITATIONS AND FUTURE WORK"
+      },
+      {
+        "text": "The current PaTAT interface supports the use of only one user at a time, while qualitative coding is often a collaborative effort with multiple users involved. With the current version of PaTAT, multiple users can first use PaTAT to annotate data individually and then come together (without AI assistance) to discuss their coding results to reach a consensus and discover additional insights as a group. This presents an opportunity for future work that helps facilitate this collaborative process. A new system can, for example, help identify conflicts and discrepancies in coding results, reveal potential biases in the coding process, assemble a group of annotators to minimize biases, and facilitate conflict resolutions.",
+        "section": "7 LIMITATIONS AND FUTURE WORK"
+      },
+      {
+        "text": "PaTAT offers many interface features and strategies to support ranking, grouping, interpreting, exploring, and validating data items and the model's recommendations. Although all of them are useful in some contexts, the findings of our user study suggest that most of them are most useful in different contexts. The large number of features also contributes to the complexity of the interface, affecting the ease of use of the system. Moving forward, a promising direction for future research is to make PaTAT more adaptive, so that it can recommend the most useful interface features and strategies for the current task domain, the use context, the analysis goals, and user preferences.",
+        "section": "7 LIMITATIONS AND FUTURE WORK"
+      },
+      {
+        "text": "Following our lab study, we plan to conduct a larger-scale deployment study and eventually a public release of PaTAT. We believe that this will not only allow a broad group of qualitative researchers to take advantage of PaTAT's AI assistance in their own task domains, but also enable us to study the long-term in-situ usage of PaTAT in its intended context of use. We hope that this future study can evaluate PaTAT's real-world usefulness, validate its ecological validity, uncover insights into how users adopt PaTAT in different task domains, and identify future research opportunities.",
+        "section": "7 LIMITATIONS AND FUTURE WORK"
+      },
+      {
+        "text": "Finally, a limitation of our lab study is its lack of quantitative results on how the use of PaTAT impacts the efficiency of the qualitative coding process, despite the fact that the qualitative findings suggest that users perceive the use of PaTAT as having positive effects on their coding efficiency (KF1 in Section 5.3.2). Although Table 2 reports the number of annotations each participant made in a study session under different conditions, we believe that it is not an appropriate measure for the efficiency of the qualitative coding process.",
+        "section": "7 LIMITATIONS AND FUTURE WORK"
+      },
+      {
+        "text": "There are future research opportunities to understand and explore this design space, expanding the expressiveness of the model to capture more abstract and complex themes while retaining the interpretability needed to support user control, validation, and human learning about the data.",
+        "section": "6 DISCUSSION"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "PaTAT",
+    "query": "What related work or prior approaches do the authors compare against?",
+    "latency_s": 66.109,
+    "num_passages": 8,
+    "passages": [
+      {
+        "text": "Several recent qualitative data analysis (QDA) systems (e.g., CODY [52], WebAnno [65], and NVivo) use the human-in-the-loop ML approach, where an ML model is trained in real time to predict additional items' labels based on the user's on-going manual labelling.",
+        "section": "1 INTRODUCTION"
+      },
+      {
+        "text": "A promising way to achieve better explainability in AI assistance for qualitative coding is to learn pattern rules to predict labels for each item. Previous pattern-based systems such as Cody [52] have been developed based on the findings of previous empirical studies [40,51].",
+        "section": "1 INTRODUCTION"
+      },
+      {
+        "text": "Another rule-based qualitative coding approach combines rule-based approaches with ML techniques to enhance the coding process. Cody [52], a web-based qualitative coding tool, uses rule-based and ML techniques to help researchers identify patterns and codes during qualitative analysis.",
+        "section": "2.2 Tools for Qualitative Data Analysis"
+      },
+      {
+        "text": "Cody uses a pre-trained language model to generate initial rules that include part-of-speech tags and word lemmatization for user-defined codes and data annotations. An ML model is then trained using the generated rules to label unseen data points.",
+        "section": "2.2 Tools for Qualitative Data Analysis"
+      },
+      {
+        "text": "Cody's increased user involvement and ability to structure and highlight data supports user insight and speeds up the coding process. However, we believe that the lack of expressiveness possible within its rules limits their versatility.",
+        "section": "2.2 Tools for Qualitative Data Analysis"
+      },
+      {
+        "text": "For example, Cody's syntax only supports the use of literal or lemmatized words, Boolean operators (AND and OR), and wildcard (*) characters. This syntax is not sufficient to capture rich lexical (e.g., part of speech tags), syntactic (e.g., structure), and semantic (e.g., word embeddings) information in text, which has been found useful in qualitative coding in previous experiments.",
+        "section": "2.2 Tools for Qualitative Data Analysis"
+      },
+      {
+        "text": "Therefore, PaTAT provides a more extensive pattern language. Compared to Tempura or Cody, PaTAT also presents new interface features for users to explore the model's state of learning; understand the reasons behind code recommendations for individual data items; evolve the codebook by merging, splitting, or revising codes; discover new themes; and understand the high-level trends and characteristics of the dataset.",
+        "section": "2.2 Tools for Qualitative Data Analysis"
+      },
+      {
+        "text": "In this evaluation, we compare our pattern synthesizer's accuracy of code predictions with that of a pre-trained BERT model [14].",
+        "section": "4.3.3 Offline performance evaluation"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "PaTAT",
+    "query": "What related work or prior approaches do the authors compare against?",
+    "latency_s": 24.58,
+    "num_passages": 8,
+    "passages": [
+      {
+        "text": "Several recent qualitative data analysis (QDA) systems (e.g., CODY [52], WebAnno [65], and NVivo) use the human-in-the-loop ML approach, where an ML model is trained in real time to predict additional items' labels based on the user's on-going manual labelling.",
+        "section": "Introduction"
+      },
+      {
+        "text": "INCEpTION [29] and BRAT [55] offer semi-automated assistive coding, with the aim of improving the efficiency and quality of coding by incorporating active learning. These tools rely on the user to iteratively train a predictive model that will recommend new labels to unlabeled data points.",
+        "section": "Tools for Qualitative Data Analysis"
+      },
+      {
+        "text": "Tempura [63] uses context-preserving structural templates generated from the dataset to group and analyze search queries. It takes advantage of the repetitive and condensed nature of search queries to linguistically summarize them. Although Tempura provides a linguistically extensive rule set that includes named entities and part-of-speech tags with an interface for interactive data exploration, its templates lack flexibility because they are targeted at well-structured data.",
+        "section": "Tools for Qualitative Data Analysis"
+      },
+      {
+        "text": "Cody [52], a web-based qualitative coding tool, uses rule-based and ML techniques to help researchers identify patterns and codes during qualitative analysis. Cody uses a pre-trained language model to generate initial rules that include part-of-speech tags and word lemmatization for user-defined codes and data annotations. An ML model is then trained using the generated rules to label unseen data points.",
+        "section": "Tools for Qualitative Data Analysis"
+      },
+      {
+        "text": "Cody's syntax only supports the use of literal or lemmatized words, Boolean operators (AND and OR), and wildcard (*) characters. This syntax is not sufficient to capture rich lexical (e.g., part of speech tags), syntactic (e.g., structure), and semantic (e.g., word embeddings) information in text, which has been found useful in qualitative coding in previous experiments [10, 11].",
+        "section": "Tools for Qualitative Data Analysis"
+      },
+      {
+        "text": "the existing limitations of ML-based annotation assistants are largely due to the \"black box\" nature of most ML models, such as end-to-end neural networks (used in [44, 67]) and support vector machines (SVMs, used in [21]).",
+        "section": "Introduction"
+      },
+      {
+        "text": "We used a within-subjects study design where each participant used the system under three different conditions: MANUAL: a baseline version of PaTAT without any intelligent features such as code recommendation, ranking, and grouping. BERT: a version of PaTAT using a \"black-box\" BERT model [14] to make code recommendations...PaTAT: a full version of PaTAT using our pattern-based synthesizer, with all key features including label recommendations, explanations, ranking, and grouping.",
+        "section": "User Study"
+      },
+      {
+        "text": "Li et al. [36] takes an active learning approach by utilizing a pre-trained language model to save the labor of annotation while leveraging human input to repair the machine's mistakes. Although these approaches show promising results in terms of the efficiency and accuracy of the model, they fall short in providing users with the information and flexibility required for iterative theme discovery in qualitative coding.",
+        "section": "Tools for Qualitative Data Analysis"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "ChainForge",
+    "query": "What are the main contributions of this paper, and what user study or evaluation was conducted to validate them?",
+    "latency_s": 52.979,
+    "num_passages": 6,
+    "passages": [
+      {
+        "text": "We present ChainForge, an open-source visual toolkit for prompt engineering and on-demand hypothesis testing of text generation LLMs. ChainForge provides a graphical interface for comparison of responses across models and prompt variations. Our system was designed to support three tasks: model selection, prompt template design, and hypothesis testing (e.g., auditing).",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "Our contributions are: the artifact of ChainForge, which is publicly available, open-source, and iteratively developed with users; in-lab usability and interview studies of a system for open-ended, on-demand hypothesis testing of LLM behavior; implications for future tools which target prompt engineering and hypothesis testing of LLM outputs.",
+        "section": "INTRODUCTION"
+      },
+      {
+        "text": "We report a qualitative user study engaging a range of participants, including people with non-computing backgrounds. Our goal was to examine how users applied ChainForge to tasks that mattered to them, position the tools’ strengths and limitations, and pose implications for future interfaces.",
+        "section": "INTRODUCTION"
+      },
+      {
+        "text": "We conducted both an in-lab usability study with new users, and a small interview study (8) with actual users—people who had found our system online and already applied it, or its source code, to real-world tasks. We hoped these studies would give us a rounded sense of our toolkit’s strengths and weaknesses, as well as identify potential mismatches between in-lab and real-world usage.",
+        "section": "5 EVALUATION RATIONALE, DESIGN, AND CONTEXT"
+      },
+      {
+        "text": "For the in-lab study, the majority of study time was taken up by free exploration. We separated it into two sections: a structured section that served as a tutorial and mock prompt engineering task; followed by an unstructured exploration of a participants’ idea, where the participant could ask the researcher for help and guidance.",
+        "section": "5 EVALUATION RATIONALE, DESIGN, AND CONTEXT"
+      },
+      {
+        "text": "For our interview study, we sought participants who had already used ChainForge for real-world tasks, reaching out via social media, GitHub, and academic networks. The first author held six semi-structured, 60 min. interviews with eight participants (in two interviews, two people had worked together).",
+        "section": "5.1 Recruitment, Participant Demographics, and Data Analysis"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "ChainForge",
+    "query": "What are the main contributions of this paper, and what user study or evaluation was conducted to validate them?",
+    "latency_s": 27.997,
+    "num_passages": 10,
+    "passages": [
+      {
+        "text": "Consistent with HCI 'toolkit' or constructive research [19], our contributions are:\n• the artifact of ChainForge, which is publicly available, open-source, and iteratively developed with users\n• in-lab usability and interview studies of a system for open-ended, on-demand hypothesis testing of LLM behavior\n• implications for future tools which target prompt engineering and hypothesis testing of LLM outputs",
+        "section": "Introduction"
+      },
+      {
+        "text": "As design contributions, we present one of the first prompt engineering tools that supports cross-LLM comparison in the HCI literature, and introduce the concept of prompt template chaining, an extension of AI chains [44], where prompt templates may be recursively nested.",
+        "section": "Introduction"
+      },
+      {
+        "text": "Synthesizing across studies, we identify three modes of prompt engineering and LLM hypothesis testing more broadly: opportunistic exploration, limited evaluation, and iterative refinement. These modes highlight different stages and user mindsets when prompt engineering and testing hypotheses.",
+        "section": "Introduction"
+      },
+      {
+        "text": "We report a qualitative user study engaging a range of participants, including people with non-computing backgrounds. Our goal was to examine how users applied ChainForge to tasks that mattered to them, position the tools' strengths and limitations, and pose implications for future interfaces.",
+        "section": "Introduction"
+      },
+      {
+        "text": "For the in-lab study, the majority of study time was taken up by free exploration. We separated it into two sections: a structured section that served as a tutorial and mock prompt engineering task; followed by an unstructured exploration of a participants' idea, where the participant could ask the researcher for help and guidance.",
+        "section": "Evaluation Rationale, Design, and Context"
+      },
+      {
+        "text": "For our interview study, we sought participants who had already used ChainForge for real-world tasks, reaching out via social media, GitHub, and academic networks. The first author held six semi-structured, 60 min. interviews with eight participants (in two interviews, two people had worked together).",
+        "section": "Recruitment, Participant Demographics, and Data Analysis"
+      },
+      {
+        "text": "We recruited in-lab participants around our U.S.-based university through listservs, Slack channels, and flyers. We tried to expand our reach beyond people experienced in CS and ML, specifically targeting participants in humanities and education... Each study took 75 minutes, and participants were given $30 in compensation (USD).",
+        "section": "Recruitment, Participant Demographics, and Data Analysis"
+      },
+      {
+        "text": "Our studies demonstrate that many users found ChainForge effective for the very tasks and behaviors targeted by our design goals—model selection, prompt iteration, hypothesis testing—with some perceiving it to be more efficient than tools like Jupyter notebooks.",
+        "section": "Introduction"
+      },
+      {
+        "text": "Through a small interview study, we found that actual users find ChainForge useful for real-world tasks, including by extending its source code, and remark on differences between their usage and in-lab users.'",
+        "section": "Introduction"
+      },
+      {
+        "text": "On average, participants rated the interface a 4.19/5.0 (stdev=0.66). No participant rated it lower than a three.",
+        "section": "In-Lab Study Findings"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "ChainForge",
+    "query": "What system or tool does this paper present, and how does it work?",
+    "latency_s": 51.2,
+    "num_passages": 5,
+    "passages": [
+      {
+        "text": "We present ChainForge, an open-source visual toolkit for prompt engineering and on-demand hypothesis testing of text generation LLMs. ChainForge provides a graphical interface for comparison of responses across models and prompt variations. Our system was designed to support three tasks: model selection, prompt template design, and hypothesis testing (e.g., auditing).",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "In this paper, we introduce a visual toolkit, ChainForge, that supports on-demand hypothesis testing of the behavior of text generating LLMs on open-domain tasks, with minimal to no coding required. We describe the design of ChainForge, including how it was motivated from real use cases at our university, and how our design evolved with feedback from fellow academics and online users.",
+        "section": "1 INTRODUCTION"
+      },
+      {
+        "text": "ChainForge was programmed by the first author in React, Type-Script, and Python. It uses ReactFlow for the front-end UI and Mantine for UI elements. The local version uses Flask to serve the app and load API keys from environment variables. The app logic for prompt permutations and sending API requests is custom designed and uses asynchronous generator functions to improve performance; it is capable of sending off hundreds of requests simultaneously to multiple LLMs, streams progress back in real-time, rate limits the requests appropriately based on the model provider, and collects API request errors without disrupting other requests.",
+        "section": "4.3 Implementation"
+      },
+      {
+        "text": "The key design difference between ChainForge and other flow-based LLMOps tools is combinatorial power—users can send off not only multiple prompts at once, but query multiple models, with multiple prompt variables that might be hierarchically organized (through chained templates) or carry additional metadata.",
+        "section": "4.1 Design Overview"
+      },
+      {
+        "text": "ChainForge provides infrastructure that helps users set up these juxtapositions across analogous differences across dimensions of variation that, given what they want to learn, users construct, i.e., by choosing multiple models, prompts, and/or values for prompt variables.",
+        "section": "3 DESIGN GOALS AND MOTIVATION"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "ChainForge",
+    "query": "What system or tool does this paper present, and how does it work?",
+    "latency_s": 22.232,
+    "num_passages": 7,
+    "passages": [
+      {
+        "text": "We present ChainForge, an open-source visual toolkit for prompt engineering and on-demand hypothesis testing of text generation LLMs. ChainForge provides a graphical interface for comparison of responses across models and prompt variations.",
+        "section": "Abstract"
+      },
+      {
+        "text": "The main ChainForge interface is depicted in Figure 1. Common to data flow programming environments [43], users can add nodes and connect them by edges. ChainForge has four types of nodes—inputs, generators, evaluators, and visualizers—as well as miscellany like comment nodes.",
+        "section": "4.1 Design Overview"
+      },
+      {
+        "text": "The key design difference between ChainForge and other flow-based LLMOps tools is combinatorial power—users can send off not only multiple prompts at once, but query multiple models, with multiple prompt variables that might be hierarchically organized (through chained templates) or carry additional metadata.",
+        "section": "4.1 Design Overview"
+      },
+      {
+        "text": "The combinatorial complexity of generating LLM queries in ChainForge may be summarized in an equation, roughly: (P prompts) × (M models) × (N responses per prompt) × max(1, (C Chat histories))",
+        "section": "4.1 Design Overview"
+      },
+      {
+        "text": "To inspect responses, users open a pop-up Response Inspector (Figure 4). The inspector has two layouts: Grouped List, where users see LLM responses side-by-side for the same prompt and can organize responses by hierarchically grouping on input variables; and Table, with columns plotting input variables and/or LLMs by user choice.",
+        "section": "4.1 Design Overview"
+      },
+      {
+        "text": "ChainForge was programmed by the first author in React, TypeScript, and Python. It uses ReactFlow for the front-end UI and Mantine for UI elements. The local version uses Flask to serve the app and load API keys from environment variables. The app logic for prompt permutations and sending API requests is custom designed and uses asynchronous generator functions to improve performance; it is capable of sending off hundreds of requests simultaneously to multiple LLMs, streams progress back in real-time, rate limits the requests appropriately based on the model provider, and collects API request errors without disrupting other requests.",
+        "section": "4.3 Implementation"
+      },
+      {
+        "text": "Since early summer 2023, ChainForge has been publicly available at chainforge.ai as web and local software, is free and open-source, and allows users to share their experiments with others as files or links.",
+        "section": "1 Introduction"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "ChainForge",
+    "query": "What are the key findings or results reported in this paper?",
+    "latency_s": 47.192,
+    "num_passages": 11,
+    "passages": [
+      {
+        "text": "ChainForge interface for testing model robustness to prompt injection attacks. Evaluation logic visible in a single screenshot; shareable as a file or web link.",
+        "section": "Task"
+      },
+      {
+        "text": "Visualizes the percentage of true responses for each LLM when subjected to prompt injection attacks. Approximate Scores (from chart): GPT3.5: ~35%, GPT4: ~35%, Claude: ~35%, PaLM2: ~30%.",
+        "section": "Chart: Success of Prompt Injection"
+      },
+      {
+        "text": "We identify three modes of prompt engineering and LLM hypothesis testing: opportunistic exploration, limited evaluation, and iterative refinement.",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "Our studies demonstrate that many users found ChainForge effective for the very tasks and behaviors targeted by our design goals—model selection, prompt iteration, hypothesis testing—with some perceiving it to be more efficient than tools like Jupyter notebooks.",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "We show that users were able to apply ChainForge to a variety of investigations, from plotting LLMs’ understanding of material properties, to discovering subtle biases in model outputs across languages.",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "Our findings on a structured task also suggest decisions around prompts and models are highly subjective: even given the same criteria and scenario, user interpretations and ranking of criteria can vary widely.",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "We found that many real-world users were using ChainForge for a need we had not anticipated: prototyping data processing pipelines.",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "ChainForge provides infrastructure that helps users set up these juxtapositions across analogous differences across dimensions of variation that, given what they want to learn, users construct, i.e., by choosing multiple models, prompts, and/or values for prompt variables.",
+        "section": "3 DESIGN GOALS AND MOTIVATION"
+      },
+      {
+        "text": "Our studies suggest that ChainForge is useful both in itself, but also as an ‘enabling’ contribution, an open-source project which others can extend (and are extending) to investigate their own ideas and topics, including other research publications to this very conference.",
+        "section": "9 DISCUSSION AND CONCLUSION"
+      },
+      {
+        "text": "We identified three modes of prompt engineering and LLM hypothesis testing: opportunistic exploration, limited evaluation, and iterative refinement.",
+        "section": "9 DISCUSSION AND CONCLUSION"
+      },
+      {
+        "text": "We found that when people choose different prompts and models, they weigh trade-offs in performance for different criteria and contexts, and bring their own perspectives, values, preferences, and contexts to bear on decision-making.",
+        "section": "9 DISCUSSION AND CONCLUSION"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "ChainForge",
+    "query": "What are the key findings or results reported in this paper?",
+    "latency_s": 42.603,
+    "num_passages": 13,
+    "passages": [
+      {
+        "text": "On average, participants rated the interface a 4.19/5.0 (stdev=0.66). No participant rated it lower than a three.",
+        "section": "IN-LAB STUDY FINDINGS"
+      },
+      {
+        "text": "Eighteen participants wanted to use the interface again; five before being explicitly asked. Some just wanted to play around, citing model comparison and multi-response generation. Participants who had prior experience testing LLM behavior in academia or industry cited speed and efficiency of iteration as the primary value of the tool ('If I had started with using this, I'd have gotten much further with my prompt engineering... This is much faster than a Jupyter Notebook', P4; 'this would save me half a day for sure... You could do a lot of stuff with it', P21).",
+        "section": "IN-LAB STUDY FINDINGS"
+      },
+      {
+        "text": "For the first part of our structured task, participants reached no consensus on which model performed 'better': eight chose PaLM2, seven GPT-4, and six Claude-2. There was no pattern in reasoning.",
+        "section": "7.1 How People Decide on Models and Prompts"
+      },
+      {
+        "text": "Fifteen participants said their understanding of AI was affected by their experience. Six were surprised by the performance of Claude-2 or PaLM2, feeling that, when confronted with direct comparisons to OpenAI models, they matched or exceeded the latter's performance. Five said that their strategy of prompting or prompt engineering had changed.",
+        "section": "7.3 ChainForge Affected Participants' Understanding of AI Behavior or Practice"
+      },
+      {
+        "text": "Synthesizing across studies, we find that people tend to move from an opportunistic exploration mode, to a limited evaluation mode, to an iterative refinement mode. About half of our in-lab users, especially end-users with limited prior experience, never left exploration mode; while programmers or auditors of LLMs quickly moved into limited evaluation mode.",
+        "section": "MODES OF PROMPT ENGINEERING AND LLM HYPOTHESIS TESTING"
+      },
+      {
+        "text": "Most surprising (to us) was that some knowledge workers were using ChainForge for a task we had never anticipated—data processing. Although we only had six interface users in our interview study, the only two in-lab participants in startups, P8 and P4, were both testing LLMs' ability to process and reformat data.",
+        "section": "DISCUSSION AND CONCLUSION"
+      },
+      {
+        "text": "Five interviewees were using ChainForge not (only) for prompt engineering or model selection, but for on-demand prototyping of data processing pipelines involving LLMs. All imported data from spreadsheets, then would send off many parametrized queries, iterate on their prompt templates and pipelines, and ultimately export data to share with others.",
+        "section": "8.1 Prototyping data processing pipelines"
+      },
+      {
+        "text": "In-lab users seemed limited in their ability to imagine systematizing their tests, even a few with prior expertise in AI or programming with LLM APIs. This extends prior work studying how 'non-AI-experts' prompt LLMs, suggesting even people who otherwise perceive themselves to be AI experts may have trouble systematizing their evaluations.",
+        "section": "DISCUSSION AND CONCLUSION"
+      },
+      {
+        "text": "Our findings on a structured task also suggest decisions around prompts and models are highly subjective: even given the same criteria and scenario, user interpretations and ranking of criteria can vary widely.",
+        "section": "INTRODUCTION"
+      },
+      {
+        "text": "The subjectivity of choosing a model and prompt implies that, while LLMs can certainly help users generate or evaluate prompts, there will never be such a thing as fully automated prompt engineering.",
+        "section": "DISCUSSION AND CONCLUSION"
+      },
+      {
+        "text": "Multiple interviewees mentioned looking at our source code, and two projects extended it... They said that the jump-start ChainForge provided was a chief reason they were able to complete their project in time to submit a paper to the annual CHI conference.",
+        "section": "8.4 Open-source flexibility"
+      },
+      {
+        "text": "Many participants wanted to export data out of ChainForge. This was also the most common pain point, especially when transitioning from a prototyping stage—which they perceived as ChainForge's strong point—to a production stage.",
+        "section": "8.2 Getting data out and sharing with others"
+      },
+      {
+        "text": "The most common conceptual issue was learning how prompt templating worked, and especially, forgetting to declare input variables in Prompt Nodes. Once users learned how to template, however, the issue often disappeared. Learning template variables seemed related to past programming expertise and not AI, suggesting users without any prior programming experience will need extra resources.",
+        "section": "7.4 Challenges and Pain-points"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "ChainForge",
+    "query": "What limitations or future work do the authors discuss?",
+    "latency_s": 50.802,
+    "num_passages": 6,
+    "passages": [
+      {
+        "text": "We wanted the system to take care of ‘the basics’—such as prompting multiple models at once, plotting graphs, or inspecting responses—such that researchers could extend or leverage our project to enable more nuanced research questions (for instance, designing their own visualization widget). Second, we wanted to explore open-source iteration, where, unlike typical HCI system research, online users themselves can give feedback on the project via GitHub.",
+        "section": "3 DESIGN GOALS AND MOTIVATION"
+      },
+      {
+        "text": "Our goal for a study was investigate how ChainForge might help people investigate hypotheses about LLM behavior that personally matters to them, while acknowledging the limitations of prior knowledge, of who would find such a toolkit useful, and of the impossibility of learning all capabilities in a short time-frame.",
+        "section": "5 EVALUATION RATIONALE, DESIGN, AND CONTEXT"
+      },
+      {
+        "text": "Some end-users and even a few users with substantial prior experience with AI models or programming with LLM APIs appeared to have trouble “scaling up,” or systematizing, their evaluations.",
+        "section": "7.4 Challenges and Pain-points"
+      },
+      {
+        "text": "Our interview findings complement, but in important places diverge, from our in-lab studies. Like many in-lab participants, real-world users praised ChainForge’s features and used it for goals we had designed for—like selecting models or prompt testing—however, some things real users cared about were hardly, if ever mentioned by in-lab participants. As we analyzed the data and compared it with our in-lab study, we realized that many user needs and pain-points revolve around the fact that they were using ChainForge to prototype data processing pipelines, a wider context that re-frames the tasks we had designed ChainForge to support as subtasks of a larger goal.",
+        "section": "8 INTERVIEWS WITH REAL-WORLD USERS"
+      },
+      {
+        "text": "Our work represents one of the only “prompt engineering” system contributions with data about real-world usage, as opposed to in-lab studies on structured tasks. Some of what real users cared about, like features for exporting data and sharing, were absent from our in-lab study—and are, in fact, also absent from similar LLM-prompting-system research with in-lab studies.",
+        "section": "9 DISCUSSION AND CONCLUSION"
+      },
+      {
+        "text": "A final point and caveat: while users found ChainForge useful for implementation and iteration, including on real-world tasks, more work needs to be done on conceptualization and planning aspects, to help users move out of opportunistic exploration into more systematic evaluations.",
+        "section": "9 DISCUSSION AND CONCLUSION"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "ChainForge",
+    "query": "What limitations or future work do the authors discuss?",
+    "latency_s": 24.037,
+    "num_passages": 9,
+    "passages": [
+      {
+        "text": "Our choice to use a qualitative evaluation methodology derived from well-known difficulties around toolkit research [19, 28], concerns about ecological validity, and, most importantly, from the fact that we could not find a prior, well-established interface that matched the entire featureset of ChainForge. Our goal was thus to establish a baseline system that future work might improve upon. While we believe our qualitative evaluation yielded some important findings, more quantitative, controlled approaches should be performed on parts of the ChainForge interface to answer targeted scientific questions.",
+        "section": "9.1 Limitations"
+      },
+      {
+        "text": "Our in-lab study was also of a relatively short duration (75 min); future work might observe changes in user behavior over longer timeframes, for instance with a multi-week workshop.",
+        "section": "9.1 Limitations"
+      },
+      {
+        "text": "Finally, for our interview study, we acknowledge a self-selection bias, where participating interviewees may already have found ChainForge useful, missing users who did not. Our in-lab study provided some insights—we speculate that users' prior exposure to programming was important to the quality of their experience.",
+        "section": "9.1 Limitations"
+      },
+      {
+        "text": "A final point and caveat: while users found ChainForge useful for implementation and iteration, including on real-world tasks, more work needs to be done on conceptualization and planning aspects, to help users move out of opportunistic exploration into more systematic evaluations. In-lab users seemed limited in their ability to imagine systematizing their tests, even a few with prior expertise in AI or programming with LLM APIs.",
+        "section": "9 DISCUSSION AND CONCLUSION"
+      },
+      {
+        "text": "Future work might target the prototyping of on-demand LLM evaluation pipelines themselves (see \"model sketching\" for inspiration [18]).",
+        "section": "9 DISCUSSION AND CONCLUSION"
+      },
+      {
+        "text": "One design solution may be to concretize each mode into separate, related interfaces or layouts—e.g., a more chat-like interface for exploration mode, that then facilitates the transition to later modes, each with dedicated interfaces.",
+        "section": "9 DISCUSSION AND CONCLUSION"
+      },
+      {
+        "text": "Our findings suggest a need for systems to support on-demand creation of data processing pipelines involving LLMs, where the purpose is not (always) to make apps, but simply process data and share the results. ChainForge's combinatorial power—the ability to send off many queries at once, parametrized by imported data—appeared key to supporting this need. Future systems should go further by providing users more accessible ways to reference upstream metadata further downstream in their chain.",
+        "section": "9 DISCUSSION AND CONCLUSION"
+      },
+      {
+        "text": "To support systematization/scaling up, we might also employ an interaction whereby a user chats with an AI that sketches out an evaluation strategy.",
+        "section": "9 DISCUSSION AND CONCLUSION"
+      },
+      {
+        "text": "Rather than framing prompt engineering (purely) as an optimization problem, projects looking to support prompt engineering should instead look for ways to give users greater control over their search process (e.g., \"steering\" [5, 46]).",
+        "section": "9 DISCUSSION AND CONCLUSION"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "ChainForge",
+    "query": "What related work or prior approaches do the authors compare against?",
+    "latency_s": 44.646,
+    "num_passages": 3,
+    "passages": [
+      {
+        "text": "There are a growing number of academic projects designed for prompting LLMs [5, 14, 25, 43], but few support systematic, as opposed to manual, evaluation of textual responses [45]. For example, PromptMaker helps users create prompts with few-shot examples; authors concluded that users “found it difficult to systematically evaluate” their prompts, wished they could score responses, and that such scoring “tended to be highly specific to their use case... rather than a metric that could be universally applied” [14]. One rare system addressing prompt evaluation for text generation is PromptAid [25], which uses a NLP paraphrasing model to perturb input prompts with semantically-similar rephrasings, resends the queries to a single LLM and plots evaluation scores. Powerful in concept, it was tested on only one sentiment analysis task, where all the test prompts, model, and evaluation metric were pre-defined for users. BotDesigner [45] supports prompt-based design of chat models, yet its evaluation was also highly structured around a specific task (creating an AI professional chef). It remains unclear how to support users in open-ended tasks that matter to them—especially comparing across multiple LLMs and setting up their own metrics—so that they test hypotheses about LLM behavior in an improvisational, yet systematic manner.",
+        "section": "2 RELATED WORK"
+      },
+      {
+        "text": "Since we launched ChainForge, a number of commercial prompt engineering and LLMOps tools have emerged, and more emerge everyday. Examples are Weights and Biases Prompts, nat.dev, Vellum.ai, Vercel, Zeno Build, and promptfoo [9, 26, 39–42]. These systems range from prompting sandboxes [29] to prompt verification and versioning inside production applications, and usually rely upon integration with code, command-line scripts, or config files [30, 38, 41]. For instance, promptfoo [41] is an evaluation harness akin to testing frameworks like jest [13], where users write config files that specify prompts and expected outputs. Tests are run from the command line. Although most systems support prompt templating, few support sending each prompt to multiple models at once; the few that support cross-model comparison, like Vellum.ai, are playgrounds that test single prompts, making it cumbersome to compare systematically.",
+        "section": "2 RELATED WORK"
+      },
+      {
+        "text": "Related visually, but distinct from our design concern of evaluation, are visual data flow environments built around LLM responses. These have two flavors: sensemaking interfaces for information foraging, and tools for designing LLM applications. Graphologue and Sensecape, instances of the former, are focused on helping users interact non-linearly with a chat LLM and provide features to, for example, elaborate on its answers [15, 36]. Second are systems for designing LLM-based applications, usually integrating with the LangChain Python package [7]: Langflow, Flowise, and Microsoft PromptFlow on Azure services [8, 22, 24]. All three tools were predated by PromptChainer, a closed-source visual programming environment for LLM app development by Wu et al. [43]. Such environments focus on constructing “AI chains” [44], or data flows between LLMs and other tools or scripts. Here, we leverage design concepts from visual flow-based tools, while focusing our design on supporting exploration and evaluation of LLM response quality. One key difference is the need for hypothesis testing tools to support combinatorial power, i.e., querying multiple models with multiple prompts at once, whereas both LLM app building and sensemaking tools focus on single responses and models.",
+        "section": "2 RELATED WORK"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "ChainForge",
+    "query": "What related work or prior approaches do the authors compare against?",
+    "latency_s": 29.701,
+    "num_passages": 8,
+    "passages": [
+      {
+        "text": "There are a growing number of academic projects designed for prompting LLMs [5, 14, 25, 43], but few support systematic, as opposed to manual, evaluation of textual responses [45]. For example, PromptMaker helps users create prompts with few-shot examples; authors concluded that users 'found it difficult to systematically evaluate' their prompts, wished they could score responses, and that such scoring 'tended to be highly specific to their use case... rather than a metric that could be universally applied' [14].",
+        "section": "Related Work"
+      },
+      {
+        "text": "One rare system addressing prompt evaluation for text generation is PromptAid [25], which uses a NLP paraphrasing model to perturb input prompts with semantically-similar rephrasings, resends the queries to a single LLM and plots evaluation scores. Powerful in concept, it was tested on only one sentiment analysis task, where all the test prompts, model, and evaluation metric were pre-defined for users.",
+        "section": "Related Work"
+      },
+      {
+        "text": "BotDesigner [45] supports prompt-based design of chat models, yet its evaluation was also highly structured around a specific task (creating an AI professional chef). It remains unclear how to support users in open-ended tasks that matter to them—especially comparing across multiple LLMs and setting up their own metrics—so that they test hypotheses about LLM behavior in an improvisational, yet systematic manner.",
+        "section": "Related Work"
+      },
+      {
+        "text": "Examples are Weights and Biases Prompts, nat.dev, Vellum.ai, Vercel, Zeno Build, and promptfoo [9, 26, 39–42]. These systems range from prompting sandboxes [29] to prompt verification and versioning inside production applications, and usually rely upon integration with code, command-line scripts, or config files [30, 38, 41]. For instance, promptfoo [41] is an evaluation harness akin to testing frameworks like jest [13], where users write config files that specify prompts and expected outputs. Tests are run from the command line.",
+        "section": "Related Work"
+      },
+      {
+        "text": "Although most systems support prompt templating, few support sending each prompt to multiple models at once; the few that support cross-model comparison, like Vellum.ai, are playgrounds that test single prompts, making it cumbersome to compare systematically.",
+        "section": "Related Work"
+      },
+      {
+        "text": "Related visually, but distinct from our design concern of evaluation, are visual data flow environments built around LLM responses. These have two flavors: sensemaking interfaces for information foraging, and tools for designing LLM applications. Graphologue and Sensecape, instances of the former, are focused on helping users interact non-linearly with a chat LLM and provide features to, for example, elaborate on its answers [15, 36]. Second are systems for designing LLM-based applications, usually integrating with the LangChain Python package [7]: Langflow, Flowise, and Microsoft PromptFlow on Azure services [8, 22, 24]. All three tools were predated by PromptChainer, a closed-source visual programming environment for LLM app development by Wu et al. [43].",
+        "section": "Related Work"
+      },
+      {
+        "text": "It also bears mentioning that many papers published about LLM-prompting are closed-source or unreleased, including PromptAid, PromptMaker, PromptChainer, and BotDesigner [14, 25, 43, 45].",
+        "section": "Related Work"
+      },
+      {
+        "text": "Tools for prompt discovery appear largely limited to simple playgrounds or chats, where users send off single prompts at a time through trial and error. Tools for systematic testing, on the other hand, tend to require idiosyncratic config files, command-line calls, ML engineering knowledge, or integration with a programming API—making them difficult to use for discovery and improvisation (not to mention non-programmers).",
+        "section": "Related Work"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "DynaVis",
+    "query": "What are the main contributions of this paper, and what user study or evaluation was conducted to validate them?",
+    "latency_s": 110.283,
+    "num_passages": 3,
+    "passages": [
+      {
+        "text": "Our contributions are as follows:\n\n• A new interactive approach for visualization editing, dynamic widgets, that combines NLI with GUI widgets to reduce the gulf of execution and enhance interactivity.\n\n• A widget synthesis engine that leverages large language models to translate natural language inputs into widgets and control functions.\n\n• A user study to evaluate how users use DynaVis to solve visualization editing tasks.",
+        "section": "INTRODUCTION"
+      },
+      {
+        "text": "To understand how users can use DynaVis to solve visualization editing tasks, we conducted a within-subjects lab study with 24 participants. In the study, users are asked to solve two sets of five visualization editing tasks, one set using DynaVis and another using a baseline NLI-based tool.",
+        "section": "USER STUDY DESIGN"
+      },
+      {
+        "text": "Our study with 24 participants shows that participants prefer to use DynaVis over NLI-only interfaces due to the ease of repeating edits, and increased confidence when editing using a GUI due to immediate visual feedback.",
+        "section": "INTRODUCTION"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "DynaVis",
+    "query": "What are the main contributions of this paper, and what user study or evaluation was conducted to validate them?",
+    "latency_s": 29.595,
+    "num_passages": 7,
+    "passages": [
+      {
+        "text": "Our contributions are as follows:\n• A new interactive approach for visualization editing, dynamic widgets, that combines NLI with GUI widgets to reduce the gulf of execution and enhance interactivity.\n• A widget synthesis engine that leverages large language models to translate natural language inputs into widgets and control functions.\n• A user study to evaluate how users use DynaVis to solve visualization editing tasks.",
+        "section": "INTRODUCTION"
+      },
+      {
+        "text": "To understand how users can use DynaVis to solve visualization editing tasks, we conducted a within-subjects lab study with 24 participants. In the study, users are asked to solve two sets of five visualization editing tasks, one set using DynaVis and another using a baseline NLI-based tool. We aim to answer the following research questions:\nRQ1 Does DynaVis reduce users' efforts to edit visualizations?\nRQ2 In what scenarios do users prefer to use dynamic widgets compared to a baseline tool?\nRQ3 What are users' strategies to work with dynamic widgets?",
+        "section": "USER STUDY DESIGN"
+      },
+      {
+        "text": "We recruited 24 participants (13 female, 10 male, 1 chose not to disclose) through the mailing lists of two research universities. Of the 24 participants, 2 worked with data visualization at least once daily, 4 participants worked with visualizations weekly, 14 participants worked with visualizations at least once a month, and 4 participants less frequently but still occasionally worked with data visualization.",
+        "section": "Participants"
+      },
+      {
+        "text": "Baseline Condition (UINL): We modified the DynaVis interface with the support for Natural Language Commands along with a set of pre-populated UI widgets for basic chart manipulation (e.g., chart title, axis range, etc.) and remove the support for dynamic widgets... Experiment Condition (UIDW): This is DynaVis with the support for dynamic widgets on top of UINL.",
+        "section": "Study Conditions"
+      },
+      {
+        "text": "In the post-task survey, the users were asked to rate their preference between the UINL and UIDW conditions. All the participants except P15 (96%) strongly preferred using DynaVis compared to the baseline tool.",
+        "section": "User Preference"
+      },
+      {
+        "text": "Participant using UIDW found it significantly (p = 0.004) easier to complete the task (μ = 6.26, σ = 0.86) compared to using the UINL (μ = 5.13, σ = 1.6).",
+        "section": "Task Completion"
+      },
+      {
+        "text": "In the UINL condition, participants used an average of 8.4 natural language commands per task (including all sub-tasks) to edit the visualization. This usage significantly (p < 0.001) decreased to just 2.67 natural language commands when using the UIDW condition. This was indeed replaced by the dynamic widget usage, where participants on average used it 13.25 times when using the UIDW condition.",
+        "section": "User Behavior"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "DynaVis",
+    "query": "What system or tool does this paper present, and how does it work?",
+    "latency_s": 80.095,
+    "num_passages": 7,
+    "passages": [
+      {
+        "text": "We introduce DynaVis, which blends natural language and dynamically synthesized UI widgets. As the user describes an editing task in natural language, DynaVis performs the edit and synthesizes a persistent widget that the user can interact with to make further modifications.",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "To address the visualization editing and refinement challenge, we design a new interaction approach, interaction via dynamically synthesized GUI widgets, and develop a tool named DynaVis for visualization editing. Our key design insight is to blend natural language interfaces with interactive GUI widgets so that users can benefit from both NLIs’ reduction in the gulf of execution and GUI’s interactivity.",
+        "section": "1 INTRODUCTION"
+      },
+      {
+        "text": "To perform a visualization editing task, the user starts by either describing what edits they want to perform (e.g., “rotate G -axis label 45 degrees”) or directly asking for a GUI widget that they envision to perform the edits with (e.g., “give me a slider to control G -axis label angles”); either way, DynaVis synthesizes a GUI widget (along with a preset value from user’s specification in the former case) using a Large Language Model (LLM) for the user to explore and perform subsequent edits.",
+        "section": "1 INTRODUCTION"
+      },
+      {
+        "text": "Besides the immediate benefits of reduced navigation overhead and interactivity for exploring edit effects, users can also easily compose and coordinate multiple edits using dynamic widgets as they persist after synthesis for quick editing access. Behind the scenes, we designed a widget synthesis engine powered by a large language model that translates user inputs into an HTML implementation of the widget and a call-back function that connects the widget inputs to visualization properties.",
+        "section": "1 INTRODUCTION"
+      },
+      {
+        "text": "DynaVis is highly expressive and supports both chart design edits (e.g., adjusting tick spacing, legend position, color scheme, label and title font properties) for authors to refine visualizations, and data-related edits (e.g., generating filters, zooming controllers, and sort) for readers to interactively explore visualizations without pre-built interactive widgets.",
+        "section": "1 INTRODUCTION"
+      },
+      {
+        "text": "DynaVis dynamically synthesizes widgets based on natural language commands for visualization editing. The user can describe an edit to the visualization, and DynaVis modifies the visualization and synthesizes a dynamic widget which the user can use for further edits.",
+        "section": "Figure 2"
+      },
+      {
+        "text": "DynaVis is implemented as a web application with React and Type- script. We use the html-react-parser library to attach and detach widgets on the fly as they are created and deleted. DynaVis’s backend hosts the data summarizer (implemented in pandas) implemented as a flask web server that communicates with the front-end using REST API. We use the OpenAI API to issue queries to the LLM.",
+        "section": "3.3 User Interface Implementation"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "DynaVis",
+    "query": "What system or tool does this paper present, and how does it work?",
+    "latency_s": 23.15,
+    "num_passages": 6,
+    "passages": [
+      {
+        "text": "We introduce DynaVis, which blends natural language and dynamically synthesized UI widgets. As the user describes an editing task in natural language, DynaVis performs the edit and synthesizes a persistent widget that the user can interact with to make further modifications.",
+        "section": "Abstract"
+      },
+      {
+        "text": "Our key design insight is to blend natural language interfaces with interactive GUI widgets so that users can benefit from both NLIs' reduction in the gulf of execution and GUI's interactivity. To perform a visualization editing task, the user starts by either describing what edits they want to perform (e.g., \"rotate x-axis label 45 degrees\") or directly asking for a GUI widget that they envision to perform the edits with (e.g., \"give me a slider to control x-axis label angles\"); either way, DynaVis synthesizes a GUI widget (along with a preset value from user's specification in the former case) using a Large Language Model (LLM) for the user to explore and perform subsequent edits.",
+        "section": "Introduction"
+      },
+      {
+        "text": "With DynaVis, we introduce dynamic widgets, which are small modular UI components that focus on a particular edit or interaction task at hand. The edit can involve simple changes to one or multiple chart properties, such as changing the position of the legend or slicing, or can involve a data transformation operation executed on the data before chart rendering, such as filtering specific ranges on the axes. At a high level, a widget has two components: An HTML script that describes the UI elements of the widget which the user will interact with to manipulate the visualization... A JavaScript callback function that contains the code that will be executed to manipulate the visualization and/or data whenever the user interacts with the widget.",
+        "section": "Dynamic Widgets"
+      },
+      {
+        "text": "Our framework comprises of 3 main modules: a Data Summarizer, a Chart Engine, and a Widget Engine. The Data Summarizer generates a summary from input data to assist visualization and widget synthesis. The Chart Engine applies changes to visualizations based on chart editing instructions, and the Widget Engine is responsible for synthesizing dynamic widgets from both types of user commands.",
+        "section": "Synthesis Framework"
+      },
+      {
+        "text": "In this paper, we use Vega-Lite specifications for representing charts since it provides us with a concise and declarative representation of visualization while also maintaining expressiveness. Vega-Lite also provides a well-supported rendering engine that is compatible with all the major web frameworks.",
+        "section": "Dynamic Widgets"
+      },
+      {
+        "text": "DynaVis is a cross-platform web application that is implemented with React and Typescript for the front-end UI and Python for the back-end server.",
+        "section": "DynaVis System Design and Implementation"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "DynaVis",
+    "query": "What are the key findings or results reported in this paper?",
+    "latency_s": 67.913,
+    "num_passages": 9,
+    "passages": [
+      {
+        "text": "Study participants (n=24) preferred DynaVis over the NLI-only interface citing ease of further edits and editing confidence due to immediate visual feedback.",
+        "section": "ABSTRACT"
+      },
+      {
+        "text": "Our study with 24 participants shows that participants prefer to use DynaVis over NLI-only interfaces due to the ease of repeating edits, and increased confidence when editing using a GUI due to immediate visual feedback.",
+        "section": "INTRODUCTION"
+      },
+      {
+        "text": "Participants using the UINL tool failed to complete sub-tasks more often than the participants using the UIDw tool. When using the UINL tool, seven participants failed one of the sub-tasks compared to two participants when using the UIDw tool.",
+        "section": "5 USER STUDY RESULTS"
+      },
+      {
+        "text": "In the post-task survey where the participants directly compared their cognitive load between the two conditions, when using the UIDW tool, 80% of participants felt less mental demand, 83% of participants felt less hurried, 62% of participants felt more successful, 75% of participants spent less effort, and 75% of the participants felt less frustrated compared to when using UINL tool.",
+        "section": "5.2 Self-reported Cognitive Task Load Index"
+      },
+      {
+        "text": "In the post-task survey, the users were asked to rate their preference between the UINL and UIDW conditions. All the participants except one strongly preferred using DynaVis compared to the baseline tool.",
+        "section": "5.4 User Preference"
+      },
+      {
+        "text": "Dynamic widgets make repetitive edits easier. Sixteen participants explicitly mentioned that dynamic widgets greatly reduced effort needed to perform repeated edits.",
+        "section": "5.4 User Preference"
+      },
+      {
+        "text": "Visual feedback enhances understanding and exploration. Nine participants mentioned they prefer using dynamic widgets due to the instant visual feedback the widgets provided when performing the edits.",
+        "section": "5.4 User Preference"
+      },
+      {
+        "text": "Prompting to create dynamic widgets is easier and more reliable. Twelve participants explicitly noted that it was easier and more reliable to prompt for dynamic widgets than to use just natural language to edit the visualization.",
+        "section": "5.4 User Preference"
+      },
+      {
+        "text": "Dynamic widgets enhance the sense of control over NL. Seven participants mentioned that using dynamic widgets provided them a greater sense of control over the outcome when making edits to the visualization.",
+        "section": "5.4 User Preference"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "DynaVis",
+    "query": "What are the key findings or results reported in this paper?",
+    "latency_s": 28.6,
+    "num_passages": 13,
+    "passages": [
+      {
+        "text": "Study participants (n=24) preferred DynaVis over the NLI-only interface citing ease of further edits and editing confidence due to immediate visual feedback.",
+        "section": "Abstract"
+      },
+      {
+        "text": "Participants using UIDW found it significantly (p = 0.004) easier to complete the task (μ = 6.26, σ = 0.86) compared to using the UINL (μ = 5.13, σ = 1.6).",
+        "section": "5.1 Task Completion"
+      },
+      {
+        "text": "When using the UINL tool, seven participants (P4, P5, P6, P10, P11, P16, P17) failed one of the sub-tasks compared to two participants (P1, P20) when using the UIDW tool.",
+        "section": "5.1 Task Completion"
+      },
+      {
+        "text": "In the UINL condition, participants used an average of 8.4 natural language commands per task (including all sub-tasks) to edit the visualization. This usage significantly (p < 0.001) decreased to just 2.67 natural language commands when using the UIDW condition. This was indeed replaced by the dynamic widget usage, where participants on average used it 13.25 times when using the UIDW condition.",
+        "section": "5.3.1 Natural Language Commands vs. Dynamic Widgets usage"
+      },
+      {
+        "text": "In the post-task survey where the participants directly compared their cognitive load between the two conditions, when using the UIDW tool, 80% of participants felt less mental demand, 83% of participants felt less hurried, 62% of participants felt more successful, 75% of participants spent less effort, and 75% of the participants felt less frustrated compared to when using UINL tool.",
+        "section": "5.2 Self-reported Cognitive Task Load Index"
+      },
+      {
+        "text": "All the participants except P15 (96%) strongly preferred using DynaVis compared to the baseline tool.",
+        "section": "5.4 User Preference"
+      },
+      {
+        "text": "Participants using UIDW tool (μ = 6.04, σ = 1.36 Likert scale) reported that AI understood their intent significantly better (p = 0.024) than participants using UINL tool (μ = 4.95, σ = 1.77 Likert scale).",
+        "section": "5.4 User Preference"
+      },
+      {
+        "text": "Finding 1: Dynamic widgets make repetitive edits easier. Sixteen participants (P1, P3, P4, P5, P6, P7, P9, P11, P13, P14, P17, P18, P19, P21, P22, P23) explicitly mentioned that dynamic widgets greatly reduced effort needed to perform repeated edits.",
+        "section": "5.4 User Preference"
+      },
+      {
+        "text": "Finding 2: Visual feedback enhances understanding and exploration. Nine participants (P2, P4, P5, P8, P11, P17, P18, P23, P24) mentioned they prefer using dynamic widgets due to the instant visual feedback the widgets provided when performing the edits.",
+        "section": "5.4 User Preference"
+      },
+      {
+        "text": "Finding 3: Prompting to create dynamic widgets is easier and more reliable. Twelve participants (P1, P2, P3, P5, P6, P11, P14, P16, P17, P21, P22, P24) explicitly noted that it was easier and more reliable to prompt for dynamic widgets than to use just natural language to edit the visualization.",
+        "section": "5.4 User Preference"
+      },
+      {
+        "text": "Finding 4: Dynamic widgets enhance the sense of control over NL. Seven participants (P3, P5, P6, P8, P10, P16, P20) mentioned that using dynamic widgets provided them a greater sense of control over the outcome when making edits to the visualization.",
+        "section": "5.4 User Preference"
+      },
+      {
+        "text": "Finding 5: Dynamic widgets enable customization, but can be overwhelming for extended use. Nine participants (P1, P3, P6, P9, P10, P11, P16, P14, P18) mentioned they liked using dynamic widgets since it allowed them to customize their own UI to suit their editing intents.",
+        "section": "5.4 User Preference"
+      },
+      {
+        "text": "On average, each query to the GPT3.5 model added a latency of 1.47 seconds (σ = 0.34 seconds). Also, on average for each NL edit / add widget command, DynaVis had to automatically retry 1.16 times (σ = 0.58 times) to fix syntax or semantic errors before producing the correct output.",
+        "section": "5.5 Tool Performance"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "DynaVis",
+    "query": "What limitations or future work do the authors discuss?",
+    "latency_s": 58.836,
+    "num_passages": 10,
+    "passages": [
+      {
+        "text": "An interesting future direction is to expand the modalities beyond the natural language and widget interaction by adding support for voice commands as well as gestures and direct manipulation of the chart.",
+        "section": "6 DISCUSSION AND FUTURE WORK"
+      },
+      {
+        "text": "However, multiple modalities also come with their challenges. For example, it is not always easy for users to figure out which modality to use and when. Hence, more research is needed to help users learn the benefits and disadvantages of each modality so that they make an informed choice.",
+        "section": "6 DISCUSSION AND FUTURE WORK"
+      },
+      {
+        "text": "Some participants from the study did express this concern and suggested having a way of categorizing the widgets predictably. Longer term usability study would provide insights to understand how constantly changing UI affects usability.",
+        "section": "6 DISCUSSION AND FUTURE WORK"
+      },
+      {
+        "text": "Another interesting future direction is to inspect how we can take advantage of dynamic UI widgets’ low programming requirement to turn end users into “no-code developers” with the ability to customize/DIY their interaction panels to augment static GUI.",
+        "section": "6 DISCUSSION AND FUTURE WORK"
+      },
+      {
+        "text": "To support editing of visualization in these low-level languages, we envision combining DynaVis with bidirectional editing approaches which leverage program analysis and synthesis techniques to propagate surface-level edit requirements to edits over program structures or parameters.",
+        "section": "6 DISCUSSION AND FUTURE WORK"
+      },
+      {
+        "text": "In the future, we can imagine a version of DynaVis that lets the user provide their interface constraints and preferences, and DynaVis automatically synthesizes UI that matches these constraints.",
+        "section": "6 DISCUSSION AND FUTURE WORK"
+      },
+      {
+        "text": "Investigating how dynamic widgets can be generalized across different application domains is worth studying in the future.",
+        "section": "6 DISCUSSION AND FUTURE WORK"
+      },
+      {
+        "text": "In the future versions of DynaVis, we can enable users to access the history of NL commands to make re-running NL commands with small edits easier for the user.",
+        "section": "6 DISCUSSION AND FUTURE WORK"
+      },
+      {
+        "text": "One of the most requested features from the participants is for more ways to customize and manage a large number of dynamic widgets. This can involve categorizing widgets by topic (like Adobe Photoshop), and collapsing/expanding (sections of) widgets.",
+        "section": "6 DISCUSSION AND FUTURE WORK"
+      },
+      {
+        "text": "We can also go further by allowing users to export the visualization spec along with the widgets to be shared with other users, similar to Bespoke.",
+        "section": "6 DISCUSSION AND FUTURE WORK"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "DynaVis",
+    "query": "What limitations or future work do the authors discuss?",
+    "latency_s": 35.688,
+    "num_passages": 11,
+    "passages": [
+      {
+        "text": "Modalities beyond NL and UI widgets. DynaVis employs two different modalities for users to specify the kinds of edits they want to make to the chart: natural language commands and interaction through dynamic widgets. An interesting future direction is to expand the modalities beyond the natural language and widget interaction by adding support for voice commands as well as gestures and direct manipulation of the chart.",
+        "section": "Discussion and Future Work"
+      },
+      {
+        "text": "DynaVis also has the potential to include by-example specifications to let users demonstrate editing examples by editing parts of the visualization and then letting the tool generalize edits to other parts of the visualization.",
+        "section": "Discussion and Future Work"
+      },
+      {
+        "text": "However, multiple modalities also come with their challenges. For example, it is not always easy for users to figure out which modality to use and when. Hence, more research is needed to help users learn the benefits and disadvantages of each modality so that they make an informed choice.",
+        "section": "Discussion and Future Work"
+      },
+      {
+        "text": "Static vs. Dynamic UI. One benefit of using natural language commands and dynamic widgets over traditional static UI is the ability to ease the gulf of execution. With static UI, the user has to know how and where to perform the edits, which can be cognitively demanding. However, with dynamic UIs, the interface is constantly changing, which can potentially increase cognitive load for the user, especially in long editing sessions and for users with editing expertise. Longer term usability study would provide insights to understand how constantly changing UI affects usability.",
+        "section": "Discussion and Future Work"
+      },
+      {
+        "text": "Unlike traditional interfaces, another limitation of DynaVis and other purely NL-based interfaces is that they do not present all possible options to the user at all times. This is a double-edged sword; Due to the ad-hoc nature of NL interfaces, NL commands for adding widgets/editing visualizations can sometimes help users discover previously unknown features, and other times can shift the onus of discovering the tool's capabilities onto the user leading to mistrust and distrust. More research is needed to study and find methods to overcome these limitations.",
+        "section": "Discussion and Future Work"
+      },
+      {
+        "text": "Another interesting future direction is to inspect how we can take advantage of dynamic UI widgets' low programming requirement to turn end users into 'no-code developers' with the ability to customize/DIY their interaction panels to augment static GUI.",
+        "section": "Discussion and Future Work"
+      },
+      {
+        "text": "Supporting imperative plotting libraries and lower-level visualization grammars. Dynamic widgets are designed around declarative high-level visualization grammar to enable compositional editing. Despite their advantages, high-level grammars expose fewer options than low-level grammars or imperative libraries for more complex visualization editing tasks. To support editing of visualization in these low-level languages, we envision combining DynaVis with bidirectional editing approaches which leverage program analysis and synthesis techniques to propagate surface-level edit requirements to edits over program structures or parameters.",
+        "section": "Discussion and Future Work"
+      },
+      {
+        "text": "Dynamic widgets for accessibility and other applications. Prior work on dynamically synthesized UIs stemmed from accessibility research, like SUPPLE and SUPPLE++ to accommodate motor and vision capabilities. In the future, we can imagine a version of DynaVis that lets the user provide their interface constraints and preferences, and DynaVis automatically synthesizes UI that matches these constraints.",
+        "section": "Discussion and Future Work"
+      },
+      {
+        "text": "While DynaVis is designed for visualization editing tasks, we believe dynamic widgets can also benefit general applications that have extensive configuration options. Investigating how dynamic widgets can be generalized across different application domains is worth studying in the future.",
+        "section": "Discussion and Future Work"
+      },
+      {
+        "text": "DynaVis design opportunities. In the future versions of DynaVis, we can enable users to access the history of NL commands to make re-running NL commands with small edits easier for the user. One of the most requested features from the participants is for more ways to customize and manage a large number of dynamic widgets. This can involve categorizing widgets by topic (like Adobe Photoshop), and collapsing/expanding (sections of) widgets. Another useful feature is to save and revisit certain combinations of widgets.",
+        "section": "Discussion and Future Work"
+      },
+      {
+        "text": "Five participants (P21, P17, P18, P8, P23) pointed out that creating dynamic widgets can get overwhelming over long editing sessions with widget panels constantly being changed, and wanted some way of either pausing widget creation or ability to categorize and control the widgets that are shown.",
+        "section": "User Study Results"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "DynaVis",
+    "query": "What related work or prior approaches do the authors compare against?",
+    "latency_s": 121.924,
+    "num_passages": 6,
+    "passages": [
+      {
+        "text": "Modern interactive visualization authoring tools (e.g., Tableau, PowerBI, Lyra, Charticulator) have greatly reduced the effort to create initial visualizations from data. With these tools, authors only need to specify high-level mappings from data fields to visual properties, and behind the scenes, these tools automatically provide 'smart defaults' to fill in hundreds of chart parameters—hiding low-level details.",
+        "section": "1 INTRODUCTION"
+      },
+      {
+        "text": "An emerging approach to address this visualization editing and refinement challenge is to design natural language interfaces (NLIs) that allow users to describe editing effects in natural language. Then, based on the user’s instructions, the tools automatically infer necessary options and corresponding values to apply the edits.",
+        "section": "1 INTRODUCTION"
+      },
+      {
+        "text": "To address the visualization editing and refinement challenge, we design a new interaction approach, interaction via dynamically synthesized GUI widgets, and develop a tool named DynaVis for visualization editing. Our key design insight is to blend natural language interfaces with interactive GUI widgets so that users can benefit from both NLIs’ reduction in the gulf of execution and GUI’s interactivity.",
+        "section": "1 INTRODUCTION"
+      },
+      {
+        "text": "In the study, users are asked to solve two sets of five visualization editing tasks, one set using DynaVis and another using a baseline NLI-based tool.",
+        "section": "4 USER STUDY DESIGN"
+      },
+      {
+        "text": "We choose the NL-based visualization editing approach as the baseline.",
+        "section": "4.2 Study Conditions"
+      },
+      {
+        "text": "We didn’t explicitly set up a widget-only baseline based on an existing visualization tool as it would require us to restrict participants to only people with experience with a certain visualization tool, hence limiting the diversity of the participants.",
+        "section": "4.2 Study Conditions"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "DynaVis",
+    "query": "What related work or prior approaches do the authors compare against?",
+    "latency_s": 38.85,
+    "num_passages": 7,
+    "passages": [
+      {
+        "text": "We consider the following two conditions in our user study. We choose the NL-based visualization editing approach as the baseline [23].\n• Baseline Condition (UINL): We modified the DynaVis interface with the support for Natural Language Commands along with a set of pre-populated UI widgets for basic chart manipulation (e.g., chart title, axis range, etc.) and remove the support for dynamic widgets. By providing both NL and basic UI supports for users to freely choose from, we believe this is a fair state-of-the-art baseline tool for the study. Pre-populated widgets are similar to static UI users use to edit visualizations (like Excel, Google Sheets, etc.).",
+        "section": "Study Conditions"
+      },
+      {
+        "text": "Note that we didn't explicitly set up a widget-only baseline based on an existing visualization tool as it would require us to restrict participants to only people with experience with a certain visualization tool, hence limiting the diversity of the participants. However, we do collect user feedback in the interview on their opinions on how their experiences with DynaVis differ from their favorite tools.",
+        "section": "Study Conditions"
+      },
+      {
+        "text": "Visualization authoring tools. Modern visualization authoring tools [6, 10, 31, 45, 46] and grammars [5, 47] are built around the grammar of graphics [56] and they greatly reduce the visualization authoring efforts by allowing users to specify high-level visualization intent via mapping of data fields to visual properties. For example, users of Tableau or PowerBI can easily drag data fields and drop into encoding shelves of visual properties to specify the mapping, and users of Vega-Lite can provide mappings concisely as a JSON object.",
+        "section": "Related Work"
+      },
+      {
+        "text": "Natural language interfaces for visualization (V-NLIs). Natural language interfaces have been extensively adopted to improve the usability of visualization systems [49]. Even commercial GUI-based tools like Tableau [36], Microsoft Power BI [12], and Google Spreadsheets [21] automatically translate natural language queries to data queries and present query results with visualizations. However, these systems limit natural language interactions to data queries and corresponding standard charts.",
+        "section": "Related Work"
+      },
+      {
+        "text": "More recent work on Dynamic interfaces follows a \"relaxation\" method to create generalized UI widgets. The relaxation method involves creating UI widgets to directly manipulate variables in a function or query. Bespoke [53] synthesizes custom GUIs for command-line applications by using user demonstrations. They employ rule-based heuristics that infer a semantic type for parameters in bash commands to create a dynamic widget for editing the parameter. Similarly, Heer et al. [28] generates dynamic UI using query relaxing that enables the users to generalize their selection. A suite of work named precision interfaces [17, 19, 63] uses SQL queries as a proxy to generate interactive widgets from a sequence of input queries. The latest iteration, NL2Interface [18] generates SQL queries from NL commands and creates a generalized UI to edit the parameters/variables in the SQL query. BOLT [51] and EVIZA [48] generate ambiguity widgets that provide a simple UI for manipulating values for ambiguous inferred variables.",
+        "section": "Related Work"
+      },
+      {
+        "text": "Prior research in domains such as accessibility and ubiquitous computing has worked on systems that automatically generate UIs. SUPPLE [25] and SUPPLE++ [26] generate custom UIs for users to accommodate their motor and vision capabilities based on user-provided specifications and activity traces. Projects such as UNIFORM [40] and the Personal Universal Controller (PUC) [39] generate custom UIs for appliances such as media consoles and printers that are customized for each individual's preferences and interaction history. Huddle [41] built atop PUC generates UIs to coordinate multiple home electronic appliances. Mavo [54] allows users to create interactive HTML pages without the need for programming by just adding special HTML attributes and also provides different editing widgets based on the type of attributes.",
+        "section": "Related Work"
+      },
+      {
+        "text": "More recently, with the advancements in Large Language Models (LLMs), systems like Lida [22] have found great success in leveraging patterns learned by LLMs from massive language and code datasets to create visualizations from natural language commands.",
+        "section": "Related Work"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "AbstractExplorer",
+    "query": "What are the main contributions of this paper, and what user study or evaluation was conducted to validate them?",
+    "latency_s": 77.131,
+    "num_passages": 4,
+    "passages": [
+      {
+        "text": "We compose and evaluate a system, called AbstractExplorer, with analogous SMT-derived characteristics for the domain of scientific abstract corpus familiarization. AbstractExplorer has a unique combination of LLM-powered (1) faceted comparative close reading with (2) role highlighting enhanced by (3) structure-based ordering and (4) alignment. An ablation study (N=24) validated that these features work best together. A summative study (N=16) describes how these features support users in familiarizing themselves with a corpus of paper abstracts from a single large conference with over 1000 papers.",
+        "section": "Abstract"
+      },
+      {
+        "text": "Three studies inform and validate ABSTRACT EXPLORER's design: First, a formative study (Section 3) suggested unmet needs and interest in our approach to supporting cross-document reasoning. Second, an ablation study with eye-tracking (Section 5) revealed that the three key features of ABSTRACTEXPLORER's central cross- sentence relationships pane-sentence order, role-coordinated high- lighting, and alignment-work best in concert, not alone. Finally, a summative study (Section 6) describes how researchers used AB- STRACTEXPLORER to familiarize themselves with a corpus of ~1000 CHI paper abstracts—reading across a larger and more diverse col-lection of abstracts and more easily discerning relationships and distributions across prior work.",
+        "section": "Introduction"
+      },
+      {
+        "text": "In this study, we allowed participants to experience views of same-aspect sentences (Section 4.1.1) with different combinations of high-lighting, ordering, and alignment (as described in Section 4.1.2 and Section 4.1.4) enabled or not, in order to understand which and/or what combinations most effectively supported users’ ability to skim and read laterally across documents.",
+        "section": "5 Ablation Study"
+      },
+      {
+        "text": "After the ablation study validated the effectiveness of all three SMT-inspired features together (especially for lower NFC users), we completed the implementation of AbstractExplorer and eval-uated its impact on researchers’ reading and sensemaking of a corpus of all ∼1000 paper abstracts from ACM CHI 2024.",
+        "section": "6 Summative User Study"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "AbstractExplorer",
+    "query": "What are the main contributions of this paper, and what user study or evaluation was conducted to validate them?",
+    "latency_s": 35.498,
+    "num_passages": 7,
+    "passages": [
+      {
+        "text": "We compose and evaluate a system, called AbstractExplorer, with analogous SMT-derived characteristics for the domain of scientific abstract corpus familiarization. AbstractExplorer has a unique combination of LLM-powered (1) faceted comparative close reading with (2) role highlighting enhanced by (3) structure-based ordering and (4) alignment. An ablation study (N=24) validated that these features work best together. A summative study (N=16) describes how these features support users in familiarizing themselves with a corpus of paper abstracts from a single large conference with over 1000 papers.",
+        "section": "Abstract"
+      },
+      {
+        "text": "In summary, we contribute:\n• Novel SMT theory-informed text analysis and rendering techniques for enabling cross-document skimming and comparative close reading at scale\n• AbstractExplorer, which instantiates these techniques for familiarizing oneself with a corpus of ~1000 CHI paper abstracts.\n• Three studies informing and evaluating the benefits, challenges, and interactions between these techniques.",
+        "section": "Introduction"
+      },
+      {
+        "text": "Three studies inform and validate AbstractExplorer's design: First, a formative study (Section 3) suggested unmet needs and interest in our approach to supporting cross-document reasoning. Second, an ablation study with eye-tracking (Section 5) revealed that the three key features of AbstractExplorer's central cross-sentence relationships pane—sentence order, role-coordinated highlighting, and alignment—work best in concert, not alone. Finally, a summative study (Section 6) describes how researchers used AbstractExplorer to familiarize themselves with a corpus of ~1000 CHI paper abstracts—reading across a larger and more diverse collection of abstracts and more easily discerning relationships and distributions across prior work.",
+        "section": "Introduction"
+      },
+      {
+        "text": "In this study, we allowed participants to experience views of same-aspect sentences (Section 4.1.1) with different combinations of highlighting, ordering, and alignment (as described in Section 4.1.2 and Section 4.1.4) enabled or not, in order to understand which and/or what combinations most effectively supported users' ability to skim and read laterally across documents.",
+        "section": "Ablation Study"
+      },
+      {
+        "text": "The most popular condition had all three features enabled, i.e., 11 out of 24 participants (≈50%) preferred Figure 7C... These results suggest that these three features lose their effectiveness when not used together.",
+        "section": "Ablation Study Results"
+      },
+      {
+        "text": "We recruited 16 participants (9 male, 7 female) from various universities across the USA through mailing lists and social media posts... Overall, participants were positive about AbstractExplorer and its features, mentioning that they made the task easier or led to a better experience in one way or another (15 out of 16 participants), highlighting the benefit for more efficient skimming (9 participants) and comparison of abstracts (5 participants), which allowed them to read abstracts at scale (5 participants).",
+        "section": "Summative User Study"
+      },
+      {
+        "text": "Vertical alignment by the second element (M=6.19, STD=0.83) and chunk highlighting (M=6.06, STD=1.34) were the top two most useful features rated by participants.",
+        "section": "Results"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "AbstractExplorer",
+    "query": "What system or tool does this paper present, and how does it work?",
+    "latency_s": 56.637,
+    "num_passages": 7,
+    "passages": [
+      {
+        "text": "We compose and evaluate a system, called AbstractExplorer, with analogous SMT-derived characteristics for the domain of scientific abstract corpus familiarization. AbstractExplorer has a unique combination of LLM-powered (1) faceted comparative close reading with (2) role highlighting enhanced by (3) structure-based ordering and (4) alignment.",
+        "section": "Abstract"
+      },
+      {
+        "text": "AbstractExplorer instantiates new minimally lossy SMT-informed techniques for skimming, reading, and reasoning about a corpus of similarly structured short documents: phrase-level role classification that drives sentence ordering, highlighting, and spatial alignment.",
+        "section": "1 Introduction"
+      },
+      {
+        "text": "AbstractExplorer is designed to help researchers (1) skim, read, and better familiarize themselves with the contents and composition style of a large corpus of abstracts and (2) reason about cross-paper relationships at scale without abstracting away the author-written sentences about their own work.",
+        "section": "4 ABSTRACTEXPLORER"
+      },
+      {
+        "text": "AbstractExplorer classifies sentences into five pre-defined aspects common in CHI abstracts: Problem Domain, Gaps in Prior Work, Methodology/Contribution, Results/Findings, and Discussion/Conclusion. These were developed to suit the context of CHI based on the authors’ manual annotation of ∼100 CHI abstracts.",
+        "section": "4.1 System Components"
+      },
+      {
+        "text": "AbstractExplorer first segments sentences into grammar-preserving chunks—segments that respect grammatical boundaries, i.e., an LLM judges that the sentence can be truncated at that chunk boundary without breaking the grammatical integrity of the preceding text. Each chunk is then classified by an LLM as having one of nine pre-defined roles, each of which has its own assigned color.",
+        "section": "4.1.2 Grammar-preserving sentence segmentation and role highlighting"
+      },
+      {
+        "text": "AbstractExplorer orders sentences within each structure group based on the sequential pattern of chunk roles (vertical juxtapositions). Sentences are recursively grouped by sequences of three chunk roles, with groups ordered by decreasing size. Within each of those groups, sentences are arranged by increasing length.",
+        "section": "4.1.4 Ordering and Alignment of Sentences within Structure Groups"
+      },
+      {
+        "text": "AbstractExplorer also aligns the sentences in three different ways: vertical alignment by the middle of the structure tuple (second element), vertical alignment by the left of the structure tuple (first element), and left-justified alignment (horizontal juxtapositions).",
+        "section": "4.1.4 Ordering and Alignment of Sentences within Structure Groups"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "AbstractExplorer",
+    "query": "What system or tool does this paper present, and how does it work?",
+    "latency_s": 82.546,
+    "num_passages": 8,
+    "passages": [
+      {
+        "text": "AbstractExplorer has a unique combination of LLM-powered (1) faceted comparative close reading with (2) role highlighting enhanced by (3) structure-based ordering and (4) alignment.",
+        "section": "Abstract"
+      },
+      {
+        "text": "AbstractExplorer is designed to help researchers (1) skim, read, and better familiarize themselves with the contents and composition style of a large corpus of abstracts and (2) reason about cross-paper relationships at scale without abstracting away the author-written sentences about their own work. To do this, AbstractExplorer is designed to support close-reading purpose-defined slices through a large collection—1,057 in our studies—of paper abstracts.",
+        "section": "4 AbstractExplorer"
+      },
+      {
+        "text": "AbstractExplorer classifies sentences into five pre-defined aspects common in CHI abstracts: Problem Domain, Gaps in Prior Work, Methodology/Contribution, Results/Findings, and Discussion/Conclusion. These were developed to suit the context of CHI based on the authors' manual annotation of ∼100 CHI abstracts.",
+        "section": "4.1 System Components"
+      },
+      {
+        "text": "Inspired by GP-TSM [24], AbstractExplorer first segments sentences into grammar-preserving chunks—segments that respect grammatical boundaries, i.e., an LLM judges that the sentence can be truncated at that chunk boundary without breaking the grammatical integrity of the preceding text. Each chunk is then classified by an LLM as having one of nine pre-defined roles, each of which has its own assigned color.",
+        "section": "4.1 System Components"
+      },
+      {
+        "text": "We consider common sequences of chunk roles to be alignable structures that could be used to support users in identifying structural similarities and differences across sentences in different abstracts, in line with Structure-Mapping Theory [17]. In SMT terminology, rendering and arranging according to corresponding chunks reify 'commonalities in structure,' while variation within corresponding chunks are 'alignable differences' that users are predicted to notice.",
+        "section": "4.1 System Components"
+      },
+      {
+        "text": "AbstractExplorer also aligns the sentences in three different ways, as illustrated in Figure 5: vertical alignment by the middle of the structure tuple (second element), vertical alignment by the left of the structure tuple (first element), and left-justified alignment (horizontal juxtapositions).",
+        "section": "4.1 System Components"
+      },
+      {
+        "text": "We process this data in a three-stage pipeline (Figure 6). In the first stage, Sentence Segmentation and Categorization, abstracts are split into individual sentences using the NLTK package, and each sentence is classified into one of the five pre-defined aspects as listed in Section 4.1.1. Classification is performed by prompting an LLM (see prompt used in Appendix D.1) with the sentence and its full abstract.",
+        "section": "4.3 Implementation Details"
+      },
+      {
+        "text": "The AbstractExplorer interface is a React app loaded with CHI 2024 abstract data from the CHI 2024 Papers Explorer's open-source repository. The dataset consists of paper abstracts and metadata including title, author names, and session. We select only full papers from the dataset, which results in 1057 paper abstracts.",
+        "section": "4.3 Implementation Details"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "AbstractExplorer",
+    "query": "What are the key findings or results reported in this paper?",
+    "latency_s": 69.218,
+    "num_passages": 7,
+    "passages": [
+      {
+        "text": "AbstractExplorer has a unique combination of LLM-powered (1) faceted comparative close reading with (2) role highlighting enhanced by (3) structure-based ordering and (4) alignment. An ablation study (N=24) validated that these features work best together. A summative study (N=16) describes how these features support users in familiarizing themselves with a corpus of paper abstracts from a single large conference with over 1000 papers.",
+        "section": "Abstract"
+      },
+      {
+        "text": "The most popular condition had all three features enabled, i.e., 11 out of 24 participants (≈ 50%) preferred Figure 7C, as shown in the “Preferred” columns of Table 1. The remaining participants were roughly evenly split between the no-features baseline (6 participants) and the without-alignment ablation condition (5 participants).",
+        "section": "5.3.1 The three features lose their effectiveness when not used together."
+      },
+      {
+        "text": "Overall, participants were positive about AbstractExplorer and its features, mentioning that they made the task easier or led to a better experience in one way or another (15 out of 16 participants), highlighting the benefit for more efficient skimming (9 participants) and comparison of abstracts (5 participants), which allowed them to read abstracts at scale (5 participants).",
+        "section": "7 Results"
+      },
+      {
+        "text": "Participants consistently rated the interface as helpful for key literature exploration activities.",
+        "section": "7 Results"
+      },
+      {
+        "text": "More than half of the participants noted that AbstractExplorer increased their reading or skimming efficiency (P1, P4, P6, P9, P10, P11, P14, P15, P16).",
+        "section": "7.1.1 Skimming similarly structured sentences efficiently."
+      },
+      {
+        "text": "Participants leveraged chunk highlighting and alignment for cross-paper comparison as well. For instance, P5 valued how the interface enabled them to “compare a well-defined aspect across selected papers, such as methodology and study size.”",
+        "section": "7.1.3 Comparing sentences to find common patterns and outliers."
+      },
+      {
+        "text": "Despite broad preference for the AbstractExplorer interface, participants identified several opportunities for improvement. Two noted that the need for horizontal scrolling interfered with skimming.",
+        "section": "7.1.4 Improving readability, context, and classification accuracy."
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "AbstractExplorer",
+    "query": "What are the key findings or results reported in this paper?",
+    "latency_s": 35.431,
+    "num_passages": 13,
+    "passages": [
+      {
+        "text": "An ablation study (N=24) validated that these features work best together. A summative study (N=16) describes how these features support users in familiarizing themselves with a corpus of paper abstracts from a single large conference with over 1000 papers.",
+        "section": "Abstract"
+      },
+      {
+        "text": "The most popular condition had all three features enabled, i.e., 11 out of 24 participants (≈50%) preferred Figure 7C. The remaining participants were roughly evenly split between the no-features baseline (6 participants) and the without-alignment ablation condition (5 participants).",
+        "section": "5.3 Results"
+      },
+      {
+        "text": "The most preferred condition (all three features enabled) was tied with the baseline no-features-enabled condition for lowest reported cognitive load. Specifically, 11 participants reported their lowest raw NASA-TLX scores in the all-three-features condition, and a different 11 participants reported their lowest raw NASA-TLX scores in the baseline condition. No participant reported their lowest Raw NASA-TLX score when using the without-alignment condition. These results suggest that these three features lose their effectiveness when not used together.",
+        "section": "5.3 Results"
+      },
+      {
+        "text": "Participants with lower NFC more frequently preferred and experienced less cognitive load when skimming with all the features enabled. Most lower-NFC participants reported their lowest cognitive load when all features were enabled, while most higher-NFC participants reported their lowest cognitive load when no features were enabled (baseline).",
+        "section": "5.3 Results"
+      },
+      {
+        "text": "Lower NFC participants were generally guided by emergent visual patterns created by the interactions between features, especially blocks of color spanning multiple sentences created when all three features are turned on. Figure 9 shows a typical lower-NFC participant reading down, across documents rather than left to right within a single document's sentence when all three features are working together; this is a radically different reading pattern.",
+        "section": "5.3 Results"
+      },
+      {
+        "text": "Overall, participants were positive about AbstractExplorer and its features, mentioning that they made the task easier or led to a better experience in one way or another (15 out of 16 participants), highlighting the benefit for more efficient skimming (9 participants) and comparison of abstracts (5 participants), which allowed them to read abstracts at scale (5 participants).",
+        "section": "7 Results"
+      },
+      {
+        "text": "According to NASA-TLX responses, participants perceived the reading task as mentally demanding (M=4.88, STD=1.26)—consistent with their reported effort levels (M=4.75, STD=1.18)—but they also reported comparable levels of perceived success in accomplishing the task (M=4.63, STD=1.26). Participants did not find the task too hurried or rushed (M=3.50, STD=1.59), and reported low levels of negative effect such as insecurity, discouragement, irritation, stress, and annoyance (M=2.56, STD=1.55).",
+        "section": "7 Results"
+      },
+      {
+        "text": "According to the log data, participants spent most of their reading time (66.31%) with vertical alignment on the second element in structure pairs, followed by alignment on the first element (29.19%), and left-justified alignment (5.13%). Highlighting usage showed a similar preference: 91.13% of time with all chunks highlighted, 8.25% with partial highlighting, and minimal time (0.63%) without highlights.",
+        "section": "7.1 SMT-Inspired Chunk Ordering, Highlighting and Alignment"
+      },
+      {
+        "text": "Vertical alignment by the second element (M=6.19, STD=0.83) and chunk highlighting (M=6.06, STD=1.34) were the top two most useful features rated by participants. Vertical alignment by the first element (M=5.63, STD=1.09) received slightly lower but still favorable usefulness rating. Left-justified alignment received more mixed ratings (M=4.25, STD=1.84).",
+        "section": "7.1 SMT-Inspired Chunk Ordering, Highlighting and Alignment"
+      },
+      {
+        "text": "Participants highlighted how the interface scaled up the number of papers they could review (P2, P4, P9, P11, P16), finding the interface to be highly helpful for exploring a greater number (M=6.19, STD=0.91) and broader range (M=5.94, STD=1.18) of paper abstracts along a given aspect than they typically would.",
+        "section": "7.1 SMT-Inspired Chunk Ordering, Highlighting and Alignment"
+      },
+      {
+        "text": "Participants rated the interface as very helpful for discovering otherwise-missed papers (M=5.81, STD=1.22). Many mentioned serendipitous discoveries of new papers (P4, P8, P11) and a more comprehensive grasp of the collection (P7, P11, P15).",
+        "section": "7.1 SMT-Inspired Chunk Ordering, Highlighting and Alignment"
+      },
+      {
+        "text": "Each participant generated at least one user-defined aspect, averaging 2.25 (STD=1.57) per participant, with heavier use during the second task (focused reading). Though user-defined aspects received comparatively lower ratings (M=4.81, STD=1.80) than other features, they were still rated as useful by most participants.",
+        "section": "7.2 User-Defined Aspects"
+      },
+      {
+        "text": "When asked about potential real-world usages of the interface, participants responded positively overall: 13 indicated they would use it regularly if made available, two would use it situationally, and only one preferred traditional interfaces.",
+        "section": "7.3 Real-World Usages"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "AbstractExplorer",
+    "query": "What limitations or future work do the authors discuss?",
+    "latency_s": 58.161,
+    "num_passages": 2,
+    "passages": [
+      {
+        "text": "We chose to test AbstractExplorer using CHI abstracts as they are a corpus of diverse short documents with implicit norms for content and style. However, AbstractExplorer could be generalized to abstracts from other CS conferences, journal articles, or even beyond abstracts to other types of implicitly or explicitly structured short documents. According to SMT, this generalization depends on most documents having some shared implicit structure. Supporting a new corpus would require defining new corpus-appropriate predefined aspects and chunk role labels. Other components would likely be able to remain unchanged.",
+        "section": "8.3 Limitations and Future Work"
+      },
+      {
+        "text": "Reading abstracts along one aspect at a time offers both advantages and limitations. On one hand, it enables users to quickly skim similar sentences across papers at scale. However, such sentence-level analysis may oversimplify the more complex arguments that span across several sentences. Abstracts, while concise, often contain intricate reasoning that may be split across several lines, and focusing on sentence-level patterns may lead to a loss of context. While our system includes linkages that allow users to quickly access the full abstract by clicking on any selected sentence, the resulting context-switching can be cognitively demanding and disruptive. Future work could explore more seamless ways of preserving context, such as allowing users to navigate through every sentence of an abstract directly within the Cross-Sentence Relationship pane, fostering a more cohesive understanding of the content.",
+        "section": "8.3 Limitations and Future Work"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "AbstractExplorer",
+    "query": "What limitations or future work do the authors discuss?",
+    "latency_s": 15.465,
+    "num_passages": 3,
+    "passages": [
+      {
+        "text": "We chose to test AbstractExplorer using CHI abstracts as they are a corpus of diverse short documents with implicit norms for content and style. However, AbstractExplorer could be generalized to abstracts from other CS conferences, journal articles, or even beyond abstracts to other types of implicitly or explicitly structured short documents. According to SMT, this generalization depends on most documents having some shared implicit structure. Supporting a new corpus would require defining new corpus-appropriate predefined aspects and chunk role labels. Other components would likely be able to remain unchanged.",
+        "section": "8.3 Limitations and Future Work"
+      },
+      {
+        "text": "Reading abstracts along one aspect at a time offers both advantages and limitations. On one hand, it enables users to quickly skim similar sentences across papers at scale. However, such sentence-level analysis may oversimplify the more complex arguments that span across several sentences. Abstracts, while concise, often contain intricate reasoning that may be split across several lines, and focusing on sentence-level patterns may lead to a loss of context.",
+        "section": "8.3 Limitations and Future Work"
+      },
+      {
+        "text": "While our system includes linkages that allow users to quickly access the full abstract by clicking on any selected sentence, the resulting context-switching can be cognitively demanding and disruptive. Future work could explore more seamless ways of preserving context, such as allowing users to navigate through every sentence of an abstract directly within the Cross-Sentence Relationship pane, fostering a more cohesive understanding of the content.",
+        "section": "8.3 Limitations and Future Work"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "AbstractExplorer",
+    "query": "What related work or prior approaches do the authors compare against?",
+    "latency_s": 63.144,
+    "num_passages": 4,
+    "passages": [
+      {
+        "text": "Recent prior work has shown that it is possible to help people read and reason about a corpus of short documents without employing lossy document representations. For example, for collections of code examples written with similar purposes but using different libraries, ParaLib used color-coordinated role highlights to reveal cross-example commonalities and distinctions. The Positional Diction Clustering (PDC) algorithm identified analogous sentences across many LLM responses, which were reified both as color-coordinated cross-document analogous text highlighting (like ParaLib) and in a novel ‘interleaved’ view where analogous sentences across documents were rendered in adjacent rows to enable more easy comparison. These examples of text-centric lossless techniques do not abstract away or summarize; they strategically re-organize and re-render the existing text to help enhance readers’ own perceptual cognition, informed by Structural Mapping Theory (SMT).",
+        "section": "Introduction"
+      },
+      {
+        "text": "ABSTRACTEXPLORER extends prior work on tools that support reading and sensemaking at scale as well as text alignment.",
+        "section": "Related Work"
+      },
+      {
+        "text": "Prior systems have employed structure to facilitate inductive sensemaking across various domains. For example, Hope et al. segments product descriptions into fine-grained functional aspects to support analogical reasoning. In the space of text-centric sensemaking tools for text and code document corpora, these systems include WORDSEER, OVERCODE, FOOBAZ, EXAMPLORE, SOLVENT, PARALIB, Positional Diction Clustering (PDC), and CORPUSSTUDIO. Some of these systems exploit shared structure by creating templates, skeletons, or schemas to reveal variation across corresponding parts.",
+        "section": "Related Work"
+      },
+      {
+        "text": "Like many of these prior systems, ABSTRACTEXPLORER is a text-centric system that exploits shared structure to support lateral reading across short document corpora at scale. Unlike prior systems, it leverages common structures in purpose, not lexical or grammatical features, at both the sentence and phrasal level in natural language documents.",
+        "section": "Related Work"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "AbstractExplorer",
+    "query": "What related work or prior approaches do the authors compare against?",
+    "latency_s": 34.22,
+    "num_passages": 9,
+    "passages": [
+      {
+        "text": "Previous visualizations in this domain have ubiquitously followed Shneiderman's Visual Information-Seeking Mantra, with details available on demand.",
+        "section": "Abstract"
+      },
+      {
+        "text": "Close reading refers to the 'conscientious analyzation and interpretation' of text [32], while distant reading [49] avoids serially reading documents by looking at alternative summaries such as counting, graphing, and mapping of text [61]. Distant reading tools often employ very lossy approaches, e.g., visualizations of documents that abstract text into topics, such as Hierarchical Topic Maps [63], and do not preserve entire sentences, such as displaying word pairs in a word cloud [11, 70].",
+        "section": "2.1 Tools for Close Reading"
+      },
+      {
+        "text": "For example, GP-TSM [24] helps readers read more efficiently by modulating text saliency while preserving grammar. VarifocalReader [36] supports skimming by presenting abstract summaries alongside the source document, with machine-learned annotations highlighting key sentence segments in different colors. Scim [15] helps readers skim academic papers by using colored highlights to guide attention to predefined content types, such as 'Objective' and 'Method.' Qlarify [14] allows scholars to specify additional information needs while reading an abstract, dynamically expanding it with relevant content from the full paper.",
+        "section": "2.1 Tools for Close Reading"
+      },
+      {
+        "text": "While still anchored on a single document, the Semantic Reader project [43] supports features that bring information from related papers into the focal paper's reading environment. For example, Relatedly [54], part of the Semantic Reader project, highlights unexplored dissimilar information in related work sections of unread papers while lowlighting previously seen information.",
+        "section": "2.1 Tools for Close Reading"
+      },
+      {
+        "text": "For collections of code examples written with similar purposes but using different libraries, ParaLib [69] used color-coordinated role highlights to reveal cross-example commonalities and distinctions. The Positional Diction Clustering (PDC) algorithm identified analogous sentences across many LLM responses, which were reified both as color-coordinated cross-document analogous text highlighting (like ParaLib) and in a novel 'interleaved' view where analogous sentences across documents were rendered in adjacent rows to enable more easy comparison [18].",
+        "section": "Introduction"
+      },
+      {
+        "text": "Some alignment strategies aim to scale up the alignment process to more (but not necessarily long) texts. For instance, Tempura [68] employs 'structural templates' based on linguistic features to organize short diverse search queries into representative groups. Gero et al. [18] addresses the challenge of aligning a large set of similar yet varying multi-sentence LLM responses with Positional Diction Clustering (PDC), an algorithm that identifies analogous sentences across documents based on shared diction and position within their respective documents. However, the PDC approach ignores purpose at both the sentence and sub-sentence level.",
+        "section": "2.2 Text Alignment"
+      },
+      {
+        "text": "In the space of text-centric [57] sensemaking tools for text and code document corpora, these systems include WordSeer [50, 51, 59], OverCode [20], Foobaz [19], Examplore [22], SOLVENT [6], Paralib [69], Positional Diction Clustering (PDC) [18], and CorpusStudio [9]. Some of these systems exploit shared structure by creating templates, skeletons, or schemas to reveal variation across corresponding parts.",
+        "section": "2.3 Text-Centric Tools for Sensemaking over Document Corpora via Shared Structure"
+      },
+      {
+        "text": "Most sensemaking systems for corpora are built for serial exploration and reading of document corpora, e.g., by improving information scent as in Paper Forager [46]'s scaled down paper images or the mixed-initiative Serendyze [33]'s recommendations of what to read next, not close reading and comparison at scale.",
+        "section": "2.4 Theories Operationalized for Supporting Inductive Sensemaking"
+      },
+      {
+        "text": "We did not conduct a comparative study because existing tools like the ACM Digital Library typically do not provide structured support for comparative close reading at scale, making direct comparison methodologically inappropriate and potentially misleading.",
+        "section": "6 Summative User Study"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "CorpusStudio",
+    "query": "What are the main contributions of this paper, and what user study or evaluation was conducted to validate them?",
+    "latency_s": 58.416,
+    "num_passages": 7,
+    "passages": [
+      {
+        "text": "We designed two novel writing support concepts that make visible emergent patterns at the document-level and sentence-level of a given paper corpus.",
+        "section": "Introduction"
+      },
+      {
+        "text": "We implemented these writing support concepts within CorpusStudio, an interactive writing environment that helps writers retrieve, inspect, generalize from, and reflect on many examples from their target venue.",
+        "section": "Introduction"
+      },
+      {
+        "text": "We conducted a user study with N=16 participants from the academic community who were actively writing their manuscripts. They used CorpusStudio to draft their paper outline, wrote one to two sections of their manuscript, and answered questionnaires eliciting their overall experience writing within CorpusStudio.",
+        "section": "Introduction"
+      },
+      {
+        "text": "Our results reveal that users felt more confident in their writing when they discovered that other people in their target community have written in a similar way. Inspecting many examples at once was useful for identifying broad structural patterns, especially for sections that typically have more common structure, such as the description of the system implementation details or participants’ demographics.",
+        "section": "Introduction"
+      },
+      {
+        "text": "To evaluate our two novel writing support concepts (described at the document level in Section 3.3.2 and at the sentence level in Section 3.3.3), we used CorpusStudio to conduct a controlled within-subjects experiment with participants who were, with one exception, actively working towards writing a manuscript for an HCI venue.",
+        "section": "User Study"
+      },
+      {
+        "text": "Participants completed two writing tasks during the user study: (i) drafting or revising an outline of their paper and (ii) drafting or revising section(s) of their paper.",
+        "section": "User Study"
+      },
+      {
+        "text": "Our qualitative findings suggest that participants had greater confidence in their writing when using CorpusStudio due to the availability of examples, which helped reduce uncertainty.",
+        "section": "Quantitative Results"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "CorpusStudio",
+    "query": "What are the main contributions of this paper, and what user study or evaluation was conducted to validate them?",
+    "latency_s": 28.508,
+    "num_passages": 6,
+    "passages": [
+      {
+        "text": "In summary, we contribute the following:\n• We designed two novel writing support concepts that make visible emergent patterns at the document-level and sentence-level of a given paper corpus.\n• We implemented these writing support concepts within CorpusStudio, an interactive writing environment that helps writers retrieve, inspect, generalize from, and reflect on many examples from their target venue\n• We found that users' writing goals guided their perception of relevance and how they adapted content from the corpus.",
+        "section": "Introduction"
+      },
+      {
+        "text": "We conducted a user study with N=16 participants from the academic community who were actively writing their manuscripts. They used CorpusStudio to draft their paper outline, wrote one to two sections of their manuscript, and answered questionnaires eliciting their overall experience writing within CorpusStudio.",
+        "section": "Introduction"
+      },
+      {
+        "text": "To evaluate our two novel writing support concepts (described at the document level in Section 3.3.2 and at the sentence level in Section 3.3.3), we used CorpusStudio to conduct a controlled within-subjects experiment with participants who were, with one exception, actively working towards writing a manuscript for an HCI venue. Participants completed two writing tasks during the user study: (i) drafting or revising an outline of their paper and (ii) drafting or revising section(s) of their paper. We referred to CorpusStudio as a 'set of design features' or 'prototype' during our user evaluation of the concepts. We used Google Docs as our baseline interface because it is a commonly used writing environment in this context. We aimed to investigate how participants would use the writing supports to achieve their goals, how the supports would affect their writing process, and how they may help them identify norms of a target community.",
+        "section": "User Study"
+      },
+      {
+        "text": "Our results reveal that users felt more confident in their writing when they discovered that other people in their target community have written in a similar way. Inspecting many examples at once was useful for identifying broad structural patterns, especially for sections that typically have more common structure, such as the description of the system implementation details or participants' demographics.",
+        "section": "Introduction"
+      },
+      {
+        "text": "Results indicated a statistically significant preference for CorpusStudio (p = 0.003). As discussed in Section 6.1, participants valued aspects such as creating a better structure for their outline, learning how to write for a new venue or topic, and confirming their existing titles.",
+        "section": "Quantitative Results"
+      },
+      {
+        "text": "All but two participants found that evaluating many sentences from previous papers gave them a better understanding of the typical writing expectations of the target venue (Figure 11). This aligns with the qualitative results where participants commented positively about the usefulness of inspecting retrieved sentences, which gave them more confidence in their writing.",
+        "section": "Quantitative Results"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "CorpusStudio",
+    "query": "What system or tool does this paper present, and how does it work?",
+    "latency_s": 48.114,
+    "num_passages": 6,
+    "passages": [
+      {
+        "text": "The image displays a software tool called CorpusStudio, designed to assist writers in creating academic papers by leveraging a corpus of existing papers.",
+        "section": "Key Features"
+      },
+      {
+        "text": "CorpusStudio supports writers by making visible the writing choices of previous authors in the corpus. To help the writer recognize common and uncommon paper structures, the left sidebar (A) shows an ordered distribution of clusters of section titles in the corpus using Positional Diction Clustering.",
+        "section": "Figure 1"
+      },
+      {
+        "text": "We implemented CorpusStudio, a writing environment with two novel writing support concepts, one at the document level and one at the sentence level, that help writers learn about the writing styles and expectations of particular audiences.",
+        "section": "Introduction"
+      },
+      {
+        "text": "CorpusStudio computes and renders an ordered distribution over section title sequences in prior papers from the community the writer wishes to write for. This gives the writer a sense of common and uncommon section titles and in what relative order they appear in prior papers.",
+        "section": "Introduction"
+      },
+      {
+        "text": "At the sentence level, CorpusStudio retrieves many example sentences from the corpus given the user’s draft-in-progress and their current cursor location within it. Words across these many example sentences are algorithmically highlighted or de-emphasized to help users see any emergent norms and outliers.",
+        "section": "Introduction"
+      },
+      {
+        "text": "CorpusStudio is a writing support system that integrates example retrieval—at both the document level and sentence level—directly into the drafting process. Writers can compare their text against a curated corpus from their target academic community, with the system presenting many real examples in parallel.",
+        "section": "Conclusion"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "CorpusStudio",
+    "query": "What system or tool does this paper present, and how does it work?",
+    "latency_s": 23.682,
+    "num_passages": 7,
+    "passages": [
+      {
+        "text": "We implemented CorpusStudio, a writing environment with two novel writing support concepts, one at the document level and one at the sentence level, that help writers learn about the writing styles and expectations of particular audiences.",
+        "section": "Introduction"
+      },
+      {
+        "text": "Specifically, at the document level, CorpusStudio computes and renders an ordered distribution [15] over section title sequences in prior papers from the community the writer wishes to write for. This gives the writer a sense of common and uncommon section titles and in what relative order they appear in prior papers (Figure 1A). At the sentence level, CorpusStudio retrieves many example sentences from the corpus given the user's draft-in-progress and their current cursor location within it (Figure 1C). Words across these many example sentences are algorithmically highlighted or de-emphasized to help users see any emergent norms and outliers.",
+        "section": "Introduction"
+      },
+      {
+        "text": "To help writers understand how papers are commonly (and uncommonly) structured within their target community at the document level, we show an ordered distribution of section title clusters from the entire corpus immediately to the left of the central text editor (Figure 1A Section Titles From Other Papers). This ordered distribution is computed by applying Positional Diction Clustering (PDC) [15] to the ordered lists of top-level section titles extracted from each paper in the corpus.",
+        "section": "Corpus Studio"
+      },
+      {
+        "text": "At the core of our approach is a novel retrieval mechanism we call analogous spatial retrieval, which integrates context, content, and spatial information. Users can request this retrieval of sentences from other papers by hitting the TAB key as they are drafting their text. Given where the user's cursor is placed in the text editor at the moment of retrieval (i.e., the text of the currently focused paragraph cell and the title of the section containing it), we retrieve and display many potentially analogous sentences from similarly titled sections of papers in the corpus (Figure 1C What others wrote column) as well as the subsequent sentence in each paper (Figure 1C What they wrote next column).",
+        "section": "Corpus Studio"
+      },
+      {
+        "text": "We implemented our system as a web application using SvelteKit. For sentence retrieval, we used WeaviateDB as our vector database, using its built-in text embedding capabilities and approximate k-Nearest Neighbor (kNN) search implementation. The system was deployed on a workstation with 12 GB of GPU memory and made remotely accessible to study participants.",
+        "section": "Implementation Details"
+      },
+      {
+        "text": "We collected 478 papers from two HCI venues (IUI and UIST) which included the proceedings from 2021 until 2023. These venues typically publish HCI system contributions.",
+        "section": "Data & Processing"
+      },
+      {
+        "text": "We prepared our corpus to support this functionality by pre-pending section titles to the extracted sentences before embedding the concatenated sequence using OpenAI's 'text-embedding-small-3' model (Figure 4). This approach enables CorpusStudio to retrieve related sentences based on both the section title and the content of the sentence.",
+        "section": "Embedding Process"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "CorpusStudio",
+    "query": "What are the key findings or results reported in this paper?",
+    "latency_s": 114.443,
+    "num_passages": 9,
+    "passages": [
+      {
+        "text": "Study results (N=16) show that participants revised the structure and content using these concepts, gaining confidence in aligning with or breaking norms after reviewing many examples. These results demonstrate the value of reifying distributions over other authors’ writing choices during the writing process.",
+        "section": "Abstract"
+      },
+      {
+        "text": "Our results reveal that users felt more confident in their writing when they discovered that other people in their target community have written in a similar way. Inspecting many examples at once was useful for identifying broad structural patterns, especially for sections that typically have more common structure, such as the description of the system implementation details or participants’ demographics.",
+        "section": "Introduction"
+      },
+      {
+        "text": "We found that users’ writing goals guided their perception of relevance and how they adapted content from the corpus.",
+        "section": "Introduction"
+      },
+      {
+        "text": "Participants reported that seeing retrieved sentences and section titles helped them overcome the blank page problem and continue drafting. They also found it helpful to view multiple contextually relevant sentences from various papers on a single page within a centralized writing environment, which allowed for easier comparison of structure and patterns.",
+        "section": "Qualitative Results"
+      },
+      {
+        "text": "Participants used the retrieved sentences and section titles to gather ideas or mimic good writing, and found the tool helpful for tasks such as drafting introductions, starting sections, describing systems, and beginning paragraphs.",
+        "section": "Qualitative Results"
+      },
+      {
+        "text": "Some participants reported that their understanding of a venue’s norms remained the same after utilizing the tool, but they still found value from other aspects such as terminology, phrasing, structure, and ideas.",
+        "section": "Qualitative Results"
+      },
+      {
+        "text": "Participants felt more confident in their writing when they discovered that other authors had written about similar ideas or expressed them in a similar style. They also gained confidence in their related works section when they found papers in the retrieved results that aligned with their own literature review.",
+        "section": "Qualitative Results"
+      },
+      {
+        "text": "Eight of 16 participants (50%) answered that they had a clearer sense of when it was appropriate to break the writing expectations of the target venue after interacting with CorpusStudio while four did not think that their understanding had changed and four gave a neutral response.",
+        "section": "Quantitative Results"
+      },
+      {
+        "text": "All but two participants found that evaluating many sentences from previous papers gave them a better understanding of the typical writing expectations of the target venue.",
+        "section": "Quantitative Results"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "CorpusStudio",
+    "query": "What are the key findings or results reported in this paper?",
+    "latency_s": 37.325,
+    "num_passages": 13,
+    "passages": [
+      {
+        "text": "Study results (N=16) show that participants revised the structure and content using these concepts, gaining confidence in aligning with or breaking norms after reviewing many examples. These results demonstrate the value of reifying distributions over other authors' writing choices during the writing process.",
+        "section": "Abstract"
+      },
+      {
+        "text": "Our results reveal that users felt more confident in their writing when they discovered that other people in their target community have written in a similar way. Inspecting many examples at once was useful for identifying broad structural patterns, especially for sections that typically have more common structure, such as the description of the system implementation details or participants' demographics.",
+        "section": "Introduction"
+      },
+      {
+        "text": "Results indicated a statistically significant preference for CorpusStudio (p = 0.003). As discussed in Section 6.1, participants valued aspects such as creating a better structure for their outline, learning how to write for a new venue or topic, and confirming their existing titles.",
+        "section": "7.1 Task 1: Outline Writing"
+      },
+      {
+        "text": "Fourteen of the 16 participants (87.5%) reported that writing the section titles in CorpusStudio with Section Titles of Other Papers made the task easier (via alleviating the blank page problem and having examples at hand in a centralized writing environment), while the remaining two participants reported that writing in the baseline interface was easier.",
+        "section": "7.1 Task 1: Outline Writing"
+      },
+      {
+        "text": "Nine of the 16 participants (56%) concluded that writing section titles in CorpusStudio felt more overwhelming because they had to mentally process the distribution of section titles—yet most acknowledged that, despite the initial challenge, the process was useful for generating ideas.",
+        "section": "7.1 Task 1: Outline Writing"
+      },
+      {
+        "text": "Between the sub-tasks, i.e., drafting the first half of the document compared to the second half, there was a statistically significant difference (p=0.014) in participants' responses to the question, 'It was easy to create the section title structure that my target venue expects.' This suggests potential learning effects as participants found it easier to create the section title structure in the second half.",
+        "section": "7.1.3 Differences Between Tasks"
+      },
+      {
+        "text": "Eight of 16 participants (50%) answered that they had a clearer sense of when it was appropriate to break the writing expectations of the target venue after interacting with CorpusStudio while four did not think that their understanding had changed and four gave a neutral response.",
+        "section": "7.2 Task 2: Writing a Section of a Manuscript"
+      },
+      {
+        "text": "All but two participants found that evaluating many sentences from previous papers gave them a better understanding of the typical writing expectations of the target venue. This aligns with the qualitative results where participants commented positively about the usefulness of inspecting retrieved sentences, which gave them more confidence in their writing.",
+        "section": "7.2 Task 2: Writing a Section of a Manuscript"
+      },
+      {
+        "text": "Participants reported that seeing retrieved sentences and section titles helped them overcome the blank page problem and continue drafting. They also found it helpful to view multiple contextually relevant sentences from various papers on a single page within a centralized writing environment, which allowed for easier comparison of structure and patterns. They reported that this layout was more efficient and less overwhelming than traditional methods, such as having multiple papers open to compare texts.",
+        "section": "6 Qualitative Results"
+      },
+      {
+        "text": "The retrieved sentences in the What others wrote column was most frequently used, followed by the colorizing redundant words mode of rendering sentences, which participants reported using for reasons including finding relevant aspects, remaining focused, reading faster, and skimming text. They also frequently used the tooltips, noting that they were useful for contextualizing retrieved sentences and identifying their source. Greying out repeated words was least frequently used.",
+        "section": "7.2 Task 2: Writing a Section of a Manuscript"
+      },
+      {
+        "text": "We found that relevance of retrieved sentences was tightly coupled with users' writing intentions, as they found different uses and rationales for integrating the retrieved results into their writing process. While CorpusStudio uses text embeddings to capture semantic and syntactic relationships, our study revealed that relevance was also determined by participants' writing goals rather than semantic similarity alone.",
+        "section": "8.1 Relevance of Retrieved Sentences"
+      },
+      {
+        "text": "The study results suggest that showing multiple examples at once is valuable despite its cognitive demands: seeing variations in how similar ideas were expressed helped participants distinguish between rigid conventions and flexible patterns in academic writing. This suggests a trade-off between cognitive load and learning potential, a consideration for future writing support systems that aim to support learning rather than just text production.",
+        "section": "8.2 Designing a System with Many Retrieved Examples"
+      },
+      {
+        "text": "As expected, while participants drew inspiration from the retrieved sentences, none showed an intent to plagiarize. Instead, they emphasized the importance of (i) modifying any examples to avoid plagiarism and align with their own ideas and (ii) saving work of interest to reference in their own paper, suggesting a strong awareness of the need to draft an original manuscript and cite properly.",
+        "section": "6.6 Efficacy of Anti-plagiarism Features"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "CorpusStudio",
+    "query": "What limitations or future work do the authors discuss?",
+    "latency_s": 51.068,
+    "num_passages": 1,
+    "passages": [
+      {
+        "text": "Our results reveal how writers interact with and perceive examples retrieved from a community-specific document corpus. However, readers should be cautious when generalizing these findings beyond the scope of our study. All participants had a background in HCI, and the corpus was drawn from two HCI venues, focusing primarily on system contribution papers. Additionally, the writing task was based on an academic writing scenario. Future research should explore other writing contexts where communities play a role, such as fiction, poetry, or argumentative writing. In our user study, participants were given 20-25 minutes to draft their text and engage with the various system features. While this offered valuable insights into their interactions and perceptions of the writing environment, it would be worthwhile to explore how prolonged use of these features might influence users’ writing habits and style.",
+        "section": "8.5 Limitations and Future Work"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "CorpusStudio",
+    "query": "What limitations or future work do the authors discuss?",
+    "latency_s": 23.052,
+    "num_passages": 3,
+    "passages": [
+      {
+        "text": "Our results reveal how writers interact with and perceive examples retrieved from a community-specific document corpus. However, readers should be cautious when generalizing these findings beyond the scope of our study. All participants had a background in HCI, and the corpus was drawn from two HCI venues, focusing primarily on system contribution papers. Additionally, the writing task was based on an academic writing scenario. Future research should explore other writing contexts where communities play a role, such as fiction, poetry, or argumentative writing. In our user study, participants were given 20-25 minutes to draft their text and engage with the various system features. While this offered valuable insights into their interactions and perceptions of the writing environment, it would be worthwhile to explore how prolonged use of these features might influence users' writing habits and style.",
+        "section": "8.5 Limitations and Future Work"
+      },
+      {
+        "text": "Our study revealed how retrieved examples influenced participants' writing in unexpected ways. When participants were looking for something specific and did not find it in the retrieved results, this led to two notable behaviors: First, participants often rephrased their text to get different results, blurring the line between writing and querying. Second, some interpreted a lack of results as evidence of their work's novelty, a problematic conclusion given CorpusStudio's limited scope (two HCI venues: IUI and UIST from 2021-2023). These findings suggest that writing support systems should actively communicate their scope and limitations, for instance by suggesting broader venue searches when topic-specific queries yield no results, helping writers make informed decisions about how to interpret search results.",
+        "section": "8.1.2 Interpreting Retrieved Results: User Behaviors and Dataset Limitations"
+      },
+      {
+        "text": "This approach may also make a community's past work more discoverable to its members. Our retrieval method is based on the local text in the draft, and not on other metrics, such as paper citation counts or author metrics. In this way, our concept might contribute to discovering less well known but relevant work that the writer would not have noticed otherwise. This could be examined in a dedicated future study, and the UI design could be developed further in this direction.",
+        "section": "8.3 Designing Writing Support for and with Community Integration, not AI Integration"
+      }
+    ]
+  },
+  {
+    "approach": "Reducto",
+    "pdf": "CorpusStudio",
+    "query": "What related work or prior approaches do the authors compare against?",
+    "latency_s": 47.136,
+    "num_passages": 7,
+    "passages": [
+      {
+        "text": "Prior work motivated the design of writing support tools with social cognitive theories and cognitive apprenticeship theory to help writers learn complex writing skills in a professional setting. While this approach allows novices to learn by mimicking model examples, it also requires expert knowledge to create and annotate these examples, which is often time-consuming and not readily available for many communities.",
+        "section": "Introduction"
+      },
+      {
+        "text": "Learning from examples has also been extensively covered in the language learning literature. Non-native English speakers (NNES) may hesitate to choose from AI-suggested content because they struggle to evaluate the content’s fluency and naturalness. To address this problem, researchers proposed that novices learn by inspecting sentences from a curated corpus such as the Corpus of Contemporary American English (COCA) or English dictionaries to help students learn the correct use of collocations and phrases.",
+        "section": "Introduction"
+      },
+      {
+        "text": "LangSmith proposed a writing support tool for drafting academic NLP papers by generating grammatically correct phrases given the user’s current draft along with prior section and paper titles. In contrast, our work surfaces existing text from a relevant peer-reviewed text corpus.",
+        "section": "Introduction"
+      },
+      {
+        "text": "Many writing support tools facilitate writing by suggesting content that users did not write themselves. Sentence completions are a frequent form of writing assistance. However, direct content generation can have negative impacts such as diminishing the author’s self-expression and ownership over the final text outcome. Related work has also looked into providing writing inspirations.",
+        "section": "Background and Related Work"
+      },
+      {
+        "text": "We build on this line of research by surfacing prior text as the user writes new text (e.g., Naeem et al. and IntroAssist). A critical difference is the much larger scale of prior text surfaced to the user and post-processed for emergent patterns in our work. For example, IntroAssist presents expert-curated email examples to help users draft their help-seeking message in a professional context, while our approach uses computational methods to show many examples drawn from a large text corpus of previously published papers.",
+        "section": "Background and Related Work"
+      },
+      {
+        "text": "Hui and Sprouse proposed a writing support tool to help college students write in a professional context assisted by scaffolded annotations. The authors proposed a checklist with multiple annotations that provide cues about the content to include in the professional email. This checklist is complemented with model texts where sections of that text have been annotated with the elements of the checklist.",
+        "section": "Background and Related Work"
+      },
+      {
+        "text": "Search engines such as Google Scholar, the ACM Digital Library, Mendeley, and Semantic Scholar typically surface documents based on topical similarity while writers need specific analogous snippets of text from the manuscript to inform their writing. Current tools also help researchers understand how their own work relates to other work by contextualizing embedded citations, drawing connections to follow-on work directly in the paper document, and making recommendations based on a paper’s metadata such as citations and authorship or its semantic similarity.",
+        "section": "Background and Related Work"
+      }
+    ]
+  },
+  {
+    "approach": "Claude",
+    "pdf": "CorpusStudio",
+    "query": "What related work or prior approaches do the authors compare against?",
+    "latency_s": 29.163,
+    "num_passages": 9,
+    "passages": [
+      {
+        "text": "Prior work motivated the design of writing support tools with social cognitive theories and cognitive apprenticeship theory [18, 19] to help writers learn complex writing skills in a professional setting. While this approach allows novices to learn by mimicking model examples, it also requires expert knowledge to create and annotate these examples, which is often time-consuming and not readily available for many communities.",
+        "section": "Introduction"
+      },
+      {
+        "text": "LangSmith proposed a writing support tool for drafting academic NLP papers [20] by generating grammatically correct phrases given the user's current draft along with prior section and paper titles. In contrast, our work surfaces existing text from a relevant peer-reviewed text corpus.",
+        "section": "Introduction"
+      },
+      {
+        "text": "Sentence completions are a frequent form of writing assistance [2, 28]. However, direct content generation can have negative impacts such as diminishing the author's self-expression and ownership over the final text outcome [30]. Related work has also looked into providing writing inspirations [6, 14, 43].",
+        "section": "2.2 Writing with External Text"
+      },
+      {
+        "text": "We build on this line of research by surfacing prior text as the user writes new text (e.g., Naeem et al. [37] and IntroAssist [18]). A critical difference is the much larger scale of prior text surfaced to the user and post-processed for emergent patterns in our work. For example, IntroAssist [18] presents expert-curated email examples to help users draft their help-seeking message in a professional context, while our approach uses computational methods to show many examples drawn from a large text corpus of previously published papers.",
+        "section": "2.2 Writing with External Text"
+      },
+      {
+        "text": "Hui and Sprouse [19] proposed a writing support tool to help college students write in a professional context assisted by scaffolded annotations. The authors proposed a checklist with multiple annotations that provide cues about the content to include in the professional email. This checklist is complemented with model texts where sections of that text have been annotated with the elements of the checklist.",
+        "section": "2.2 Writing with External Text"
+      },
+      {
+        "text": "Search engines such as Google Scholar, the ACM Digital Library, Mendeley, and Semantic Scholar typically surface documents based on topical similarity while writers need specific analogous snippets of text from the manuscript to inform their writing. Current tools also help researchers understand how their own work relates to other work [29] by contextualizing embedded citations [5], drawing connections to follow-on work directly in the paper document [40], and making recommendations based on a paper's metadata such as citations and authorship [7, 23, 39, 42] or its semantic similarity [3, 17, 23].",
+        "section": "2.3 Finding Relevant Examples"
+      },
+      {
+        "text": "Most interactive research tools either support analyzing related work [26, 29, 33, 38] or writing with computational help [9, 28]. In existing contexts, writers often need to navigate away from their writing environment to search for related work, scroll through the target document, select and process relevant text structures and draw conclusions about the implicit writing conventions encoded in the target document.",
+        "section": "2.3 Finding Relevant Examples"
+      },
+      {
+        "text": "We used Google Docs as our baseline interface because it is a commonly used writing environment in this context.",
+        "section": "5 User Study"
+      },
+      {
+        "text": "Our concept provides relevant text snippets to support writing but it does not use any AI-generated text, in contrast to recent trends in writing assistant systems [27]. Instead of training AI on a corpus, we surface examples from the corpus directly.",
+        "section": "8.3 Designing Writing Support for and with Community Integration, not AI Integration"
+      }
+    ]
+  }
+]
